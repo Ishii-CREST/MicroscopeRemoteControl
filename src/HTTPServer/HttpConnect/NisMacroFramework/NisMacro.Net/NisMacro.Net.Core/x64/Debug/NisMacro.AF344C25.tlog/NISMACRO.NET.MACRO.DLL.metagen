@@ -1,0 +1,989 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly NisMacro.Net.Macro, Version=1.0.*, Culture=ロケールに依存しない言語 (ロケールに依存しない国): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly NisMacro.Net.Interprocess, Version=1.0.*, Culture=ロケールに依存しない言語 (ロケールに依存しない国): 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly NisMacro.Net.Setting, Version=1.0.*, Culture=ロケールに依存しない言語 (ロケールに依存しない国): 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class NisMacro.Net.Macro.ExMemberInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Reflection.MemberInfo, NisMacro.Net.Macro.NisInterface.IMacro): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    NisMacro.Net.Macro.NisMacroAttribute MacroFieldAttribute 'get set' : 
+    Int32 Index 'get ' : 
+    Boolean IsPointer 'get ' : 
+    System.Type ValueType 'get ' : 
+    Int32 ArraySize 'get ' : 
+    NisMacro.Net.Macro.eParamType ParamType 'get ' : 
+    System.String Name 'get ' : 
+    System.Object Value 'get set' : 
+    System.String GetMemberName 'get ' : 
+  Methods:
+    get_MacroFieldAttribute(): PrivateScope, Public, HideBySig, SpecialName
+    get_Index(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsPointer(): PrivateScope, Public, HideBySig, SpecialName
+    get_ValueType(): PrivateScope, Public, HideBySig, SpecialName
+    get_ArraySize(): PrivateScope, Public, HideBySig, SpecialName
+    get_ParamType(): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    set_Value(Object): PrivateScope, Public, HideBySig, SpecialName
+    get_GetMemberName(): PrivateScope, Public, HideBySig, SpecialName
+Class NisMacro.Net.Macro.MacroEventArgs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.EventArgs
+    Void .ctor(NisMacro.Net.Macro.NisInterface.IMacro, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsTimeOut 'get set' : 
+    NisMacro.Net.Macro.NisInterface.IMacro Imacro 'get set' : 
+  Methods:
+    get_IsTimeOut(): PrivateScope, Public, HideBySig, SpecialName
+    get_Imacro(): PrivateScope, Public, HideBySig, SpecialName
+Class NisMacro.Net.Macro.CommandManager: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    NisMacro.Net.Macro.CommandManager GetInstance 'get ' : 
+  Events:
+    NisMacroEventHadler NisMacroFinishEvent: 
+    NisMacroEventHadler NisMacroStartEvent: 
+    DelegateProc EventTriggerevent: 
+  Methods:
+    get_GetInstance(): PrivateScope, Public, Static, HideBySig, SpecialName
+    add_NisMacroFinishEvent(NisMacroEventHadler): PrivateScope, Public, HideBySig, SpecialName
+    remove_NisMacroFinishEvent(NisMacroEventHadler): PrivateScope, Public, HideBySig, SpecialName
+    add_NisMacroStartEvent(NisMacroEventHadler): PrivateScope, Public, HideBySig, SpecialName
+    remove_NisMacroStartEvent(NisMacroEventHadler): PrivateScope, Public, HideBySig, SpecialName
+    add_EventTriggerevent(DelegateProc): PrivateScope, Public, HideBySig, SpecialName
+    remove_EventTriggerevent(DelegateProc): PrivateScope, Public, HideBySig, SpecialName
+    SetVariable(IVariable, Object): PrivateScope, Public, HideBySig
+    GetVariable(IVariable): PrivateScope, Public, HideBySig
+    SendEventTrigger(Int32): PrivateScope, Public, HideBySig
+    SendMacro(IMacro): PrivateScope, Public, HideBySig
+    SendMacro(IMacro[]): PrivateScope, Public, HideBySig
+    SendMacroASync(IMacro, NisMacroEventHadler(Optional, HasDefault), Int32(Optional, HasDefault)): PrivateScope, Public, HideBySig
+Class NisMacro.Net.Macro.PublicDefine: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class NisMacro.Net.Macro.StoredData: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    NisMacro.Net.Macro.StoredData GetInstance 'get ' : 
+  Methods:
+    get_GetInstance(): PrivateScope, Public, Static, HideBySig, SpecialName
+    AddData(Type, Object): PrivateScope, Public, HideBySig
+    GetData(): PrivateScope, Public, HideBySig
+    GetData(Int32, Type): PrivateScope, Public, HideBySig
+    SetData(Int32, Type, Object): PrivateScope, Public, HideBySig
+    ClearDataList(): PrivateScope, Public, HideBySig
+Struct NisMacro.Net.Macro.eParamType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    NisMacro.Net.Macro.eParamType InParam = 0 : Public, Static, Literal, HasDefault
+    NisMacro.Net.Macro.eParamType OutParam = 1 : Public, Static, Literal, HasDefault
+    NisMacro.Net.Macro.eParamType Return = 2 : Public, Static, Literal, HasDefault
+    NisMacro.Net.Macro.eParamType Return_Ignore = 3 : Public, Static, Literal, HasDefault
+Class NisMacro.Net.Macro.NisMacroAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Attribute
+    Void .ctor(NisMacro.Net.Macro.eParamType, Int32, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    NisMacro.Net.Macro.eParamType ParamType : Public
+    Int32 Index : Public
+    Boolean IsPointer : Public
+    Int32 ArraySize : Public
+Class NisMacro.Net.Macro.Utility: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    GetINisMacroTypes(): PrivateScope, Public, Static, HideBySig
+    CheckInvalid(IMacro): PrivateScope, Public, Static, HideBySig
+Class NisMacro.Net.Macro.Variable.NisVariableBase: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Type, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Type, System.String, System.Object, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    NisMacro.Net.Macro.NisInterface.IVariable
+  Properties:
+    System.Type VarType 'get set' : 
+    System.String VarName 'get set' : 
+    Boolean IsGlobal 'get set' : 
+  Methods:
+    get_VarType(): PrivateScope, Public, HideBySig, SpecialName
+    get_VarName(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsGlobal(): PrivateScope, Public, HideBySig, SpecialName
+    GetNisVariable(Type, String): PrivateScope, Public, HideBySig
+Interface NisMacro.Net.Macro.NisInterface.IVariable: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    CreateSetCmd(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateGetCmd(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetVariableType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetValue(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetValue(Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface NisMacro.Net.Macro.NisInterface.IMacro: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Methods:
+    GetNisParamMemberInfo(eParamType[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetNisParamMemberInfo(List`1): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetMacroName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    CreateCmd(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class NisMacro.Net.Macro.Macros.NisMacroBase: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    NisMacro.Net.Macro.NisInterface.IMacro
+  Properties:
+    System.String MacroName 'get set' : 
+  Methods:
+    get_MacroName(): PrivateScope, Public, HideBySig, SpecialName
+    set_MacroName(String): PrivateScope, Public, HideBySig, SpecialName
+Class NisMacro.Net.Macro.Macros.View.Overlay.ViewBinary: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.View.Overlay.ViewColor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.View.Overlay.ViewColor_Overlay: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.View.Overlay.ViewOverlay: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.View.Controls.ShowControl: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+    System.String Name : Public
+    Int32 ShowDockingView : Public
+Class NisMacro.Net.Macro.Macros._System.Get_Info: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 what : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ROI.BinaryFromMask: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ROI.BinaryToMask: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ROI.ChangeROIType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 RoiId : Public
+    Int32 RoiType : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ROI.ClearMeasROI: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ROI.CreateRectangleROI: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 CenterX : Public
+    Int32 CenterY : Public
+    Int32 Width : Public
+    Int32 Height : Public
+    Double AngleRot : Public
+    Int64 ColorRGB : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ROI.GetROICount: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ROI.GetROIIdFromIndex: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 RoiIndex : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ROI.GetROIInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 RoiId : Public
+    Int32 LpBBoxL : Public
+    Int32 LpBBoxT : Public
+    Int32 LpBBoxR : Public
+    Int32 LpBBoxB : Public
+    Int32 LpCenterX : Public
+    Int32 LpCenterY : Public
+    Int32 LpMinFeret : Public
+    Int32 LpMaxFeret : Public
+    Double LpRotation : Public
+    Int64 lpColorRGB : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ROI.LoadROI: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Image : Public
+    Int32 FitROI : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ROI.SaveROIAs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String FileName : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ROI._BinaryFromMaskND: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.OpticalConfiguration.AddOptConf: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String CurrOptConf : Public
+    System.String Objective : Public
+    Int32 NosepieceSetting : Public
+    Int32 CameraSetting : Public
+    Int32 MicroscopeSetting : Public
+    Int32 ShutterType : Public
+    Int32 ShutterType2 : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.OpticalConfiguration.BackupOptConf: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String FileName : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.OpticalConfiguration.GetOptConfCount: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.OpticalConfiguration.GetOptConfName: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Index : Public
+    System.String CurrOptConf : Public
+    Int32 ObjectiveNameMaxLength : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.OpticalConfiguration.RestoreOptConf: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String FileName : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.OpticalConfiguration.SelectOptConf: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String OptConf : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.NDEnableSaveToTIFF: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 ND_EnableSaveToTIFF : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.ZSeries.ND_GetZSeriesExp: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 ND_LpZSeriesType : Public
+    Double ND_LpZSeriesTop : Public
+    Double ND_LpZSeriesHome : Public
+    Double ND_LpZSeriesBottom : Public
+    Double ND_LpZSeriesStep : Public
+    Int32 ND_LpZSeriesCount : Public
+    Int32 ND_LpZSeriesHomeDefined : Public
+    Int32 ND_LpZSeriesCloseShuter : Public
+    System.String ND_ZSeriesDevice : Public
+    System.String ND_TimeCommandBefore : Public
+    System.String ND_TimeCommandAfter : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.ZSeries.ND_ResetZSeriesExp: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 ND_LpZSeriesType : Public
+    Double ND_LpZSeriesTop : Public
+    Double ND_LpZSeriesHome : Public
+    Double ND_LpZSeriesBottom : Public
+    Double ND_LpZSeriesStep : Public
+    Int32 ND_LpZSeriesCount : Public
+    Int32 ND_LpZSeriesHomeDefined : Public
+    Int32 ND_LpZSeriesCloseShuter : Public
+    System.String ND_ZSeriesDevice : Public
+    System.String ND_TimeCommandBefore : Public
+    System.String ND_TimeCommandAfter : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhase: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double ND_TimeInterval : Public
+    Double ND_TimeDuration : Public
+    System.String ND_TimeCommand : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhaseEx: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double ND_TimeInterval : Public
+    Int32 ND_TimeCount : Public
+    System.String ND_TimeCommand : Public
+    System.String ND_PhaseName : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimeLapsePhaseCount: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimePhase: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 ND_TimeIndex : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimePhaseSchedule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 ND_TimePhase : Public
+    Double ND_GetTimeInterval : Public
+    Double ND_GetTimeDuration : Public
+    Int32 ND_TimeLoopCnt : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_ResetTimeExp: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_RunTimeExp: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.Stimulation.ND_StimulationResetPhases: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.Stimulation.ND_RunSequentialStimulationExp: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.Stimulation.ND_StimulationAppendPhase: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 PhaseType : Public
+    Double ND_TimeInterval : Public
+    Double ND_TimeDuration : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_AppendMultipointPoint: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double ND_MultipointXCoord : Public
+    Double ND_MultipointYCoord : Public
+    Double ND_MultipointZCoord : Public
+    System.String ND_MultipointName : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_MP_GetCount: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_ResetMultipointExp: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.MultiChannel.ND_IsInExperimentCapture: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.Experiment.ND_DefineExperiment: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 ND_TExp : Public
+    Int32 ND_XYExp : Public
+    Int32 ND_ZExp : Public
+    Int32 ND_LExp : Public
+    Int32 ND_NormalZOrder : Public
+    System.String Filename : Public
+    System.String Prefix : Public
+    Int32 ND_FileType : Public
+    Int32 ND_UseTIFF : Public
+    Int32 ND_UsePFS : Public
+    Int32 ND_EnableTMeas : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.Experiment.ND_ExportToTIFF: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Filename : Public
+    System.String Dest_Directory : Public
+    System.String Prefix : Public
+    Int32 ChannelExportType : Public
+    Int32 ApplyLuts : Public
+    Int32 uiSaveAsMCH : Public
+    Int32 iMultiPageMask : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.Experiment.ND_InsertEvent: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 EventType : Public
+    Double EventTime : Public
+    System.String EventDescription : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ND.Experiment.ND_RunExperiment: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 EventDescription : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Measure.Objects.ScanObjects: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Macro.RunMacro: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String MacroFileName : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Image.Clipboard.Paste: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Image : Public
+    Int32 ImType : Public
+    Int32 ImCompr : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ImageDocument.Open.OpenDocument: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Image : Public
+    Int32 SaveModified : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ImageDocument.Close.CloseCurrentDocument: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+    Int32 Save : Public
+Class NisMacro.Net.Macro.Macros.ImageDocument.Activate.ActivateDocument: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String DocumentName : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.Z.StgFocus: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.Z.StgFocusAdaptiveTwoPasses: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Step : Public
+    Double FineStep : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.Z.StgFocusInRangeTwoPasses: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double FocusRange : Public
+    Double CoarseStep : Public
+    Double FineStep : Public
+    Int32 Result : Public
+  Methods:
+    GetResultStatus(): PrivateScope, Public, HideBySig
+Class NisMacro.Net.Macro.Macros.Device.Z.StgFocusSetCriterion: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 FocusCriterion : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.Z.StgGetPosZ: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double LpStgZ : Public
+    Int32 ZDevice : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.Z.StgMoveMainZ: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double StgZ : Public
+    Int32 relative : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.Z.StgMoveZ: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double stgZ : Public
+    Int32 relative : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.Z.StgSetupFocus: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Method : Public
+    Int32 Step : Public
+    Int32 Stop : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.Z.StgSetupFocusAdaptiveTwoPasses: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Step : Public
+    Double FineStep : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.Z.StgSetupFocusTwoPasses: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double FocusRange : Public
+    Double CoarseStep : Public
+    Double FineStep : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.XY.StgGetPosXY: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double LpStgX : Public
+    Double LpStgY : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.XY.StgMoveXY: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double stgX : Public
+    Double stgY : Public
+    Int32 relative : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_GetNosepieceObjectiveName: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+    Int32 NosepiecePosition : Public
+    System.String Name : Public
+    Int32 MaxLength : Public
+Class NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_GetNosepiecePosition: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_IsNosepiecePresent: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_SetNosepiecePosition: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 ObjIndex : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.ConfocalA1.A1ApplyStimulationSettings: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Compatibility.Get_Calibration: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String ObjectiveName : Public
+    Double cal : Public
+    Double Aspect : Public
+    Int32 unit : Public
+    Double Result : Public
+Class NisMacro.Net.Macro.Macros.Calibration.GetCalibrationViewUnit: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String CalibrationViewUnit : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Calibration.GetCalibrationViewPrecision: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 CalibrationViewPrecision : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Calibration.SetCalibrationViewUnit: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String CalibrationViewUnit : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Calibration.SetCalibrationViewPrecision: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 CalibrationViewPrecision : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Calibration.Get_CurrentCalibration: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 FQMode : Public
+    Int32 ActiveCamera : Public
+    System.String ObjectiveName : Public
+    Double cal : Public
+    Double Aspect : Public
+    Int32 unit : Public
+    Double Result : Public
+Class NisMacro.Net.Macro.Macros.Binary.Layers.BinLayerDelete: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BinLayerNameDst : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.ND_IsAcqTabChecked: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String NDAcquisitionTabName : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Twain.Freeze: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Twain.Live: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.ScanArea.Confocal_GetScanArea: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+    Double Confocal_Zoom : Public
+    Double Confocal_Angle : Public
+    Double Confocal_XOffset : Public
+    Double Confocal_YOffset : Public
+    Double Confocal_ScanAreaAspect : Public
+Class NisMacro.Net.Macro.Macros.Acquire.ScanArea.Confocal_SetScanArea: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+    Double Confocal_Zoom : Public
+    Double Confocal_Angle : Public
+    Double Confocal_XOffset : Public
+    Double Confocal_YOffset : Public
+    Double Confocal_ScanAreaAspect : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Capture.Capture: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_CHnChannelDyeName: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Name : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_CHnLaserPower: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingScannerWidth: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_LineAveraging: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_LineSkip: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ScanFrameRateIndex: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_ImagingScannerWidth: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 CameraPropIntParam : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_IRLasernWavelength: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eIRLaser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_IRLasernWavelength: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eIRLaser): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnLaserStimulationPowern: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel, NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eStimID): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_CHnLaserStimulationPowern: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel, NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eStimID): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingUseImagingChannelBit: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingZoom: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ScanAreaAspect: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnChannelDyeName: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String Name : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnChannelLaserIndex: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnLaserPower: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_ImagingZoom: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_LineAcquireMode: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 CameraPropIntParam : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_LineAveraging: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 CameraPropIntParam : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_LineSkip: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 CameraPropIntParam : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_ScanAngle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_ScanAreaAspect: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_ScanFrameRateIndex: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 CameraPropIntParam : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_ScanXOffset: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_ScanYOffset: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_StimulationTimen: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eStimID): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Class NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_StimulationTimen: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :NisMacro.Net.Macro.Macros.NisMacroBase
+    Void .ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eStimID): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Value : Public
+    Int32 Result : Public
+Struct NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel CH1 = 1 : Public, Static, Literal, HasDefault
+    NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel CH2 = 2 : Public, Static, Literal, HasDefault
+    NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel CH3 = 3 : Public, Static, Literal, HasDefault
+    NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel CH4 = 4 : Public, Static, Literal, HasDefault
+Struct NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eIRLaser: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eIRLaser Laser1 = 1 : Public, Static, Literal, HasDefault
+    NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eIRLaser Laser2 = 2 : Public, Static, Literal, HasDefault
+Struct NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eStimID: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eStimID Stim1 = 1 : Public, Static, Literal, HasDefault
+    NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eStimID Stim2 = 2 : Public, Static, Literal, HasDefault
+    NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eStimID Stim3 = 3 : Public, Static, Literal, HasDefault
+Class NisMacro.Net.Macro.Functions.DeviceControl: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    GetNosePieceList(): PrivateScope, Public, Static, HideBySig
+    GetNosePiecePosition(): PrivateScope, Public, Static, HideBySig
+    SetNosePiecePosition(Int32): PrivateScope, Public, Static, HideBySig
+Class NisMacro.Net.Macro.Functions.ImageControl: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    SetActiveFile(String): PrivateScope, Public, Static, HideBySig
+    GetCurrentImage(): PrivateScope, Public, Static, HideBySig
+    GetBinary(): PrivateScope, Public, Static, HideBySig
+    SaveMaskImage(String): PrivateScope, Public, Static, HideBySig
+    LoadMaskImage(String): PrivateScope, Public, Static, HideBySig
+    SetScanArea(Rectangle, Double): PrivateScope, Public, Static, HideBySig
+    SetScanArea(Double(Optional, HasDefault), Double(Optional, HasDefault), Double(Optional, HasDefault), Double(Optional, HasDefault), Double(Optional, HasDefault)): PrivateScope, Public, Static, HideBySig
+    ResetScanArea(): PrivateScope, Public, Static, HideBySig
+Class NisMacro.Net.Macro.CommandManager+NisMacroEventHadler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object, MacroEventArgs): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Object, MacroEventArgs, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class NisMacro.Net.Macro.CommandManager+DelegateProc: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class NisMacro.Net.Macro.CommandManager+ASyncSetting: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(NisMacro.Net.Macro.NisInterface.IMacro, NisMacroEventHadler, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    NisMacro.Net.Macro.NisInterface.IMacro Imacro 'get set' : 
+    Int32 TimeOutMSec 'get set' : 
+    Boolean IsTimeout 'get set' : 
+    NisMacroEventHadler CallBack 'get set' : 
+  Methods:
+    get_Imacro(): PrivateScope, Public, HideBySig, SpecialName
+    set_Imacro(IMacro): PrivateScope, Public, HideBySig, SpecialName
+    get_TimeOutMSec(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsTimeout(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsTimeout(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_CallBack(): PrivateScope, Public, HideBySig, SpecialName
+Struct NisMacro.Net.Macro.PublicDefine+TiLightPath: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    TiLightPath EYE = 0 : Public, Static, Literal, HasDefault
+    TiLightPath L100 = 1 : Public, Static, Literal, HasDefault
+    TiLightPath R100 = 2 : Public, Static, Literal, HasDefault
+    TiLightPath L80 = 3 : Public, Static, Literal, HasDefault
+Struct NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs+eImType: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    eImType Binary = 1 : Public, Static, Literal, HasDefault
+    eImType Color = 2 : Public, Static, Literal, HasDefault
+    eImType Vector = 8 : Public, Static, Literal, HasDefault
+    eImType AllLayer = 15 : Public, Static, Literal, HasDefault
+Struct NisMacro.Net.Macro.Macros.ImageDocument.Close.CloseCurrentDocument+eSave: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    eSave QUERYSAVE_ASK = 0 : Public, Static, Literal, HasDefault
+    eSave QUERYSAVE_YES = 1 : Public, Static, Literal, HasDefault
+    eSave QUERYSAVE_NO = 2 : Public, Static, Literal, HasDefault
+Struct NisMacro.Net.Macro.Macros.Device.Z.StgFocusInRangeTwoPasses+eResult: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    eResult FOCUS_WAS_SUCCESSFUL = 1 : Public, Static, Literal, HasDefault
+    eResult FOCUS_FAILED = 0 : Public, Static, Literal, HasDefault
+    eResult COARSESTEP_OR_FINESTEP_LESS_THAN_ZERO = -1 : Public, Static, Literal, HasDefault
+    eResult FOCUSRANGE_IS_LESS_THAN_ZERO = -2 : Public, Static, Literal, HasDefault
+    eResult FOCUS_FAILED_2 = -3 : Public, Static, Literal, HasDefault
+Struct NisMacro.Net.Macro.Macros.Device.Z.StgFocusSetCriterion+eCriterion: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    eCriterion BRIGHTFIELD = 0 : Public, Static, Literal, HasDefault
+    eCriterion INTENSITY = 1 : Public, Static, Literal, HasDefault
+    eCriterion FLUORESCENCE = 2 : Public, Static, Literal, HasDefault
+    eCriterion NOISE_RESISTANT = 3 : Public, Static, Literal, HasDefault
+    eCriterion MAX_SUM_INTENSITY = 4 : Public, Static, Literal, HasDefault

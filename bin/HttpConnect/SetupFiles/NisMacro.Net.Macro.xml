@@ -1,0 +1,2507 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NisMacro.Net.Macro</name>
+    </assembly>
+    <members>
+        <member name="T:NisMacro.Net.Macro.Define">
+            <summary>
+            NisMacro.Net.Macro内での規定値管理クラス
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Define.STR_BUFFER_LENGTH">
+            <summary>
+            Str文字列を送受信する際のバッファサイズ
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.ExMemberInfo">
+            <summary>
+            Refrection.MemberInfoの拡張
+            マクロパラメータ属性を付加
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.ExMemberInfo._memberInfo">
+            <summary>
+            メンバー情報
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.ExMemberInfo.MacroFieldAttribute">
+            <summary>
+            マクロパラメータ属性
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.ExMemberInfo.Index">
+            <summary>
+            インデックス(属性)
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.ExMemberInfo.IsPointer">
+            <summary>
+            ポインタで取得するかどうか
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.ExMemberInfo.ValueType">
+            <summary>
+            属性タイプ(System.Int32、System.stringとか)
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.ExMemberInfo.ArraySize">
+            <summary>
+            リストで取得する場合のサイズ。
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.ExMemberInfo.ParamType">
+            <summary>
+            パラメータタイプ(属性)
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.ExMemberInfo.Name">
+            <summary>
+            パラメータ名
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.ExMemberInfo.Value">
+            <summary>
+            パラメータの値
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.ExMemberInfo.GetMemberName">
+            <summary>
+            NisElementsとの連携時に作成する文字列内の変数名を返す
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.ExMemberInfo.#ctor(System.Reflection.MemberInfo,NisMacro.Net.Macro.NisInterface.IMacro)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="memberInfo">メンバー情報</param>
+        </member>
+        <member name="T:NisMacro.Net.Macro.MacroEventArgs">
+            <summary>
+            マクロコマンドイベントクラス
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.MacroEventArgs.IsTimeOut">
+            <summary>
+            タイムアウトしたかどうか
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.MacroEventArgs.Imacro">
+            <summary>
+            マクロオブジェクト
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.MacroEventArgs.#ctor(NisMacro.Net.Macro.NisInterface.IMacro,System.Boolean)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="iMacro">マクロオブジェクト</param>
+            <param name="isTimeOut">タイムアウトしたかどうか</param>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_CHnLaserPower">
+            <summary>
+            CH1で指定されているレーザパワーを取得する
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_CHnLaserPower.#ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="channel">チャンネル</param>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_CHnLaserPower.Value">
+            <summary>
+            レーザパワー(1 ～ 100)
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_CHnLaserPower.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingScannerHeight">
+            <summary>
+            CameraGet_ImagingScannerHeight
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingScannerHeight.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingScannerHeight.Value">
+            <summary>
+            スキャン幅
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingScannerHeight.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingScannerWidth.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingScannerWidth.Value">
+            <summary>
+            スキャン幅
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingScannerWidth.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingUseImagingChannelBit.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingUseImagingChannelBit.Value">
+            <summary>
+            使用Ch
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingUseImagingChannelBit.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ScanAreaAspect">
+            <summary>
+            CameraGet_ScanAreaAspect
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ScanAreaAspect.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ScanAreaAspect.Value">
+            <summary>
+            LineAverage数
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ScanAreaAspect.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_LineAveraging">
+            <summary>
+            CameraGet_LineAveraging
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_LineAveraging.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_LineAveraging.Value">
+            <summary>
+            LineAverage数
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_LineAveraging.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ScanFrameRateIndex">
+            <summary>
+            CameraGet_ScanFrameRateIndex
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ScanFrameRateIndex.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ScanFrameRateIndex.Value">
+            <summary>
+            フレームレートIndex
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ScanFrameRateIndex.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_ImagingScannerWidth">
+            <summary>
+            CameraSet_ImagingScannerWidth
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_IRLasernWavelength">
+            <summary>
+            CameraSet_IRLasernWavelength
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_IRLasernWavelength.#ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eIRLaser)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="channel">チャンネル</param>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_IRLasernWavelength.Value">
+            <summary>
+            IR波長
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_IRLasernWavelength.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_IRLasernWavelength">
+            <summary>
+            CameraGet_IRLasernWavelength
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_IRLasernWavelength.#ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eIRLaser)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="channel">チャンネル</param>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_IRLasernWavelength.Value">
+            <summary>
+            IR波長
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_IRLasernWavelength.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnLaserStimulationPowern">
+            <summary>
+            刺激用レーザーパワーを設定する。
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnLaserStimulationPowern.#ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel,NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eStimID)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="channel">チャンネル</param>
+            <param name="stimID">刺激ID</param>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnLaserStimulationPowern.Value">
+            <summary>
+            レーザパワー(0 ～ 100)
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnLaserStimulationPowern.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_CHnLaserStimulationPowern">
+            <summary>
+            CH1で指定されているレーザパワーを取得する
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_CHnLaserStimulationPowern.#ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel,NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eStimID)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="channel">チャンネル</param>
+            <param name="stimID">刺激ID</param>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_CHnLaserStimulationPowern.Value">
+            <summary>
+            レーザパワー(0 ～ 100)
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_CHnLaserStimulationPowern.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingZoom">
+            <summary>
+            スキャンズーム倍率変更
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingZoom.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingZoom.Value">
+            <summary>
+            ズーム倍率値(1 ～ 1000)
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_ImagingZoom.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnChannelLaserIndex">
+            <summary>
+            CameraSet_CHnChannelLaserIndex
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnChannelLaserIndex.#ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="channel">チャンネル</param>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnChannelLaserIndex.Value">
+            <summary>
+            レーザIndex
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnChannelLaserIndex.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnLaserPower">
+            <summary>
+            CH1で指定されているレーザパワーを設定する
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnLaserPower.#ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="channel">チャンネル</param>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnLaserPower.Value">
+            <summary>
+            レーザパワー(1 ～ 100)
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_CHnLaserPower.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_ImagingZoom">
+            <summary>
+            スキャンズーム倍率変更
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_ImagingZoom.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_ImagingZoom.Value">
+            <summary>
+            ズーム倍率値(1 ～ 1000)
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_ImagingZoom.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_LineAcquireMode">
+            <summary>
+            CameraSet_LineAcquireMode
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_LineAveraging">
+            <summary>
+            CameraSet_LineAveraging
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_ScanFrameRateIndex">
+            <summary>
+            CameraSet_ScanFrameRateIndex
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_StimulationTimen">
+            <summary>
+            CameraGet_StimulationTimen
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_StimulationTimen.#ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eStimID)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="channel">チャンネル</param>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_StimulationTimen.Value">
+            <summary>
+            刺激時間
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraGet_StimulationTimen.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_StimulationTimen">
+            <summary>
+            CameraSet_StimulationTimen
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_StimulationTimen.#ctor(NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eStimID)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="channel">チャンネル</param>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_StimulationTimen.Value">
+            <summary>
+            刺激時間
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.CameraSet_StimulationTimen.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Camera.Properties.eChanncel">
+            <summary>
+            チャンネル情報
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Capture.Capture">
+            <summary>
+            撮像の開始要求
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Capture.Capture.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Capture.Capture.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.ND_IsAcqTabChecked">
+            <summary>
+            Returns true if the specified Tab of the ND Acquisition window is enabled.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.ND_IsAcqTabChecked.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.ND_IsAcqTabChecked.NDAcquisitionTabName">
+            <summary>
+            Name of an ND Acquisition tab as you see it in the dialog window (case sensitive).
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.ND_IsAcqTabChecked.Result">
+            <summary>
+            結果
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Twain.Freeze">
+            <summary>
+            撮像の停止要求
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Twain.Freeze.#ctor">
+            <summary>
+            Constractor
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Twain.Freeze.Result">
+            <summary>
+            1 = Nosepiece is present.
+            0 = Nosepiexe is not Present.
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Acquire.Twain.Live">
+            <summary>
+            撮像の開始要求
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Acquire.Twain.Live.#ctor">
+            <summary>
+            Constractor
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Acquire.Twain.Live.Result">
+            <summary>
+            1 = Nosepiece is present.
+            0 = Nosepiexe is not Present.
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.AdvancedAPI.InterProcess.Int_ExecuteCommand">
+            <summary>
+            Int_ExecuteCommand
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.AdvancedAPI.InterProcess.Int_ExecuteCommand.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.AdvancedAPI.InterProcess.Int_ExecuteCommand.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.AdvancedAPI.InterProcess.Int_ExecuteCommand.AppId">
+             <summary>
+            Application ID of instance that will run the command.
+             </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.AdvancedAPI.InterProcess.Int_ExecuteCommand.Command">
+            <summary>
+            Command to run.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.AdvancedAPI.InterProcess.Int_ExecuteCommand.Result">
+            <summary>
+            Returns the resulting code of the command.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.AdvancedAPI.InterProcess.Int_ExecProgram.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.AdvancedAPI.InterProcess.Int_ExecProgram.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.AdvancedAPI.InterProcess.Int_ExecProgram.Int_str1">
+            <summary>
+            イベントタイプ(何らかのタグ値?）
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.AdvancedAPI.InterProcess.Int_ExecProgram.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Calibration.GetCalibrationViewUnit.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Calibration.GetCalibrationViewUnit.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.GetCalibrationViewUnit.CalibrationViewUnit">
+            <summary>
+            Name of the calibration unit.
+            px:Pixels
+            km:Kilometers
+            m:Meters
+            dm:Decimeters
+            cm:Centimeters
+            mm:Millimeters
+            um:Micrometers
+            nm:Nanometers
+            inch:Inches
+            mil:Mils
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.GetCalibrationViewUnit.Result">
+            <summary>
+            Result Not use.
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Calibration.GetCalibrationViewPrecision">
+            <summary>
+            GetCalibrationViewPrecision
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Calibration.GetCalibrationViewPrecision.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Calibration.GetCalibrationViewPrecision.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.GetCalibrationViewPrecision.CalibrationViewPrecision">
+            <summary>
+            Number of digits after the decimal point.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.GetCalibrationViewPrecision.Result">
+            <summary>
+            Result Not use.
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Calibration.SetCalibrationViewUnit">
+            <summary>
+            SetCalibrationViewUnit
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Calibration.SetCalibrationViewUnit.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Calibration.SetCalibrationViewUnit.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.SetCalibrationViewUnit.CalibrationViewUnit">
+            <summary>
+            Name of the calibration unit.
+            px:Pixels
+            km:Kilometers
+            m:Meters
+            dm:Decimeters
+            cm:Centimeters
+            mm:Millimeters
+            um:Micrometers
+            nm:Nanometers
+            inch:Inches
+            mil:Mils
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.SetCalibrationViewUnit.Result">
+            <summary>
+            Result Not use.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Calibration.SetCalibrationViewPrecision.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Calibration.SetCalibrationViewPrecision.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.SetCalibrationViewPrecision.CalibrationViewPrecision">
+            <summary>
+            Number of digits after the decimal point.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.SetCalibrationViewPrecision.Result">
+            <summary>
+            Result Not use.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Calibration.Get_CurrentCalibration.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Calibration.Get_CurrentCalibration.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.Get_CurrentCalibration.FQMode">
+            <summary>
+            Calibration of what camera mode shall be retrieved?
+            0:The currently active mode.
+            1:Fast camera mode
+            2:Quality camera mode
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.Get_CurrentCalibration.ActiveCamera">
+            <summary>
+            In case of a dual camera system, select the camera 
+            for which to retrieve the calibration.
+            0:The primary camera.
+            1:The secondary camera.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.Get_CurrentCalibration.ObjectiveName">
+            <summary>
+            Objective name to be filled.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.Get_CurrentCalibration.cal">
+            <summary>
+            Size of one pixel in the specified units.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.Get_CurrentCalibration.Aspect">
+            <summary>
+            Aspect ratio of the image.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.Get_CurrentCalibration.unit">
+            <summary>
+            Points to calibration unit. Filled on output
+            0:Pixels
+            1:Nanometers
+            2:Micrometers
+            3:Millimeters
+            4:Centimeters
+            5:Decimeters
+            6:Meters
+            7:Kilometers
+            8:Mils
+            9:Inches
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Calibration.Get_CurrentCalibration.Result">
+            <summary>
+            This function returns calibration of the selected 
+            camera mode - the LpCal parameter value.
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Compatibility.Get_Calibration">
+            <summary>
+            Get_Calibration
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Compatibility.Get_Calibration.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Compatibility.Get_Calibration.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Compatibility.Get_Calibration.ObjectiveName">
+            <summary>
+            Objective name to be filled.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Compatibility.Get_Calibration.cal">
+            <summary>
+            Size of one pixel in the specified units.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Compatibility.Get_Calibration.Aspect">
+            <summary>
+            Aspect ratio of the image.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Compatibility.Get_Calibration.unit">
+            <summary>
+            Points to calibration unit. Filled on output
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Compatibility.Get_Calibration.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ConfocalA1.A1ApplyStimulationSettings">
+            <summary>
+            刺激設定をApplyする
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ConfocalA1.A1ApplyStimulationSettings.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ConfocalA1.A1ApplyStimulationSettings.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_GetNosepieceObjectiveName">
+            <summary>
+            対物レンズ名取得
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_GetNosepieceObjectiveName.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_GetNosepieceObjectiveName.SetDefaultParamater">
+            <summary>
+            パラメータのデフォルト値を指定する
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_GetNosepieceObjectiveName.Result">
+            <summary>
+            結果パラメータ
+            詳細はヘルプを参照
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_GetNosepieceObjectiveName.NosepiecePosition">
+            <summary>
+            取得したい対物レンズのレボルバーインデックス
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_GetNosepieceObjectiveName.Name">
+            <summary>
+            対物レンズ名
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_GetNosepieceObjectiveName.MaxLength">
+            <summary>
+            Nameで返される予定のバッファサイズ = 1024で固定する
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_GetNosepiecePosition">
+            <summary>
+            対物レンズ台位置取得
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_GetNosepiecePosition.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_GetNosepiecePosition.Result">
+            <summary>
+            対物レンズのインデックス
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_IsNosepiecePresent">
+            <summary>
+            対物レンズ台有無取得
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_IsNosepiecePresent.#ctor">
+            <summary>
+            Constractor
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_IsNosepiecePresent.Result">
+            <summary>
+            1 = Nosepiece is present.
+            0 = Nosepiexe is not Present.
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_SetNosepiecePosition">
+            <summary>
+            対物レンズ位置セット
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_SetNosepiecePosition.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_SetNosepiecePosition.ObjIndex">
+            <summary>
+            対物レンズのインデックス
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Nosepiece.Stg_SetNosepiecePosition.Result">
+            <summary>
+            DR_OK (1):Nosepiece objective position was set
+            DR_BADPARAMETER (-2):Some parameter has invalid value
+            DR_NOTAVAILABLE (-4):Device Nosepiece is not present
+            DR_UNKNOWNERROR (-1):Setting nosepiece objective position failed
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Device.XY.StgGetPosXY">
+            <summary>
+            StgGetPosXY
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.XY.StgGetPosXY.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.XY.StgGetPosXY.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.XY.StgGetPosXY.LpStgX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.XY.StgGetPosXY.LpStgY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.XY.StgGetPosXY.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Device.XY.StgMoveXY">
+            <summary>
+            StgMoveXY
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.XY.StgMoveXY.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.XY.StgMoveXY.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.XY.StgMoveXY.stgX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.XY.StgMoveXY.stgY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.XY.StgMoveXY.relative">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.XY.StgMoveXY.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Device.Z.StgGetPosZ">
+            <summary>
+            StgGetPosZ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.Z.StgGetPosZ.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.Z.StgGetPosZ.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Z.StgGetPosZ.LpStgZ">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Z.StgGetPosZ.ZDevice">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Z.StgGetPosZ.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Device.Z.StgMoveMainZ">
+            <summary>
+            Moves the primary (main) Z drive to the specified position (absolute movement) or by the specified distance (relative movement).
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.Z.StgMoveMainZ.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Z.StgMoveMainZ.StgZ">
+            <summary>
+            Position/distance in micrometers.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Z.StgMoveMainZ.relative">
+            <summary>
+            Movement type (absolute/relative).
+            0,MOVE_ABSOLUTE:Absolute movement
+            1,MOVE_RELATIVE:Relative movement
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Device.Z.StgMoveZ">
+            <summary>
+            StgMoveZ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.Z.StgMoveZ.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Device.Z.StgMoveZ.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Z.StgMoveZ.stgZ">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Z.StgMoveZ.relative">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Device.Z.StgMoveZ.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ImageDocument.Activate.ActivateDocument">
+            <summary>
+            アクティブ画像を切り替える
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ImageDocument.Activate.ActivateDocument.#ctor">
+            <summary>
+            Constractor
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Activate.ActivateDocument.DocumentName">
+            <summary>
+            画像パス
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Activate.ActivateDocument.Result">
+            <summary>
+            結果 このマクロでは使用しない
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ImageDocument.Close.CloseCurrentDocument">
+            <summary>
+            カレントの画像を閉じる
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ImageDocument.Close.CloseCurrentDocument.eSave">
+            <summary>
+            Save値列挙
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Close.CloseCurrentDocument.eSave.QUERYSAVE_ASK">
+            <summary>
+            Cancel Operation.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Close.CloseCurrentDocument.eSave.QUERYSAVE_YES">
+            <summary>
+            Changes are saved.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Close.CloseCurrentDocument.eSave.QUERYSAVE_NO">
+            <summary>
+            Changes are not saved.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ImageDocument.Close.CloseCurrentDocument.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Close.CloseCurrentDocument.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Close.CloseCurrentDocument.Save">
+            <summary>
+            変更時のダイアログ表示
+            0 = QUERYSAVE_ASK   Cancel Operation.
+            1 = QUERYSAVE_YES   Changes are saved.
+            2 = QUERYSAVE_NO    Changes are not saved.
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ImageDocument.Open.OpenDocument">
+            <summary>
+            The OpenDocument function opens the document and displays specified image on the screen.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ImageDocument.Open.OpenDocument.#ctor">
+            <summary>
+            Constractor
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Open.OpenDocument.Image">
+            <summary>
+            Complete path to the the image.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Open.OpenDocument.SaveModified">
+            <summary>
+            SaveModified Specifies whether to save an opened document when it has been modified.
+            1: Asks whether to save changes or not.
+            2: Changes are saved.
+            3: Changes are not saved.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Open.OpenDocument.Result">
+            <summary>
+            No Difine in this Macro.
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs">
+            <summary>
+            カレント画像を保存する
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs.eImType">
+            <summary>
+            保存タイプ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs.eImType.Binary">
+            <summary>
+            バイナリ画像のみ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs.eImType.Color">
+            <summary>
+            カラー画像のみ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs.eImType.Vector">
+            <summary>
+            ベクターのみ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs.eImType.AllLayer">
+            <summary>
+            全レイヤー
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs.SetDefaultParamater">
+            <summary>
+            デフォルトの値を設定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs.Image">
+            <summary>
+            保存先(拡張子含む)
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs.ImType">
+            <summary>
+            保存タイプ
+            1   = Binary image
+            2   = Color image
+            8   = Vector annotations
+            15  = All layers
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs.ImCompr">
+            <summary>
+            圧縮率
+            詳細はマクロのヘルプを参照
+            通常 0 でよさそう
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ImageDocument.Save.ImageSaveAs.Result">
+            <summary>
+            本マクロでは未使用
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.Macro.RunMacro">
+            <summary>
+            The RunMacro function executes MacroFileName macro.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.Macro.RunMacro.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Macro.RunMacro.MacroFileName">
+            <summary>
+            Name of the macro file including file path. E.g. “C:\macros\mymacro.mac” 
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.Macro.RunMacro.Result">
+            <summary>
+            Macro Result
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ND.Experiment.ND_DefineExperiment">
+            <summary>
+            ND_DefineExperiment
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.Experiment.ND_DefineExperiment.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.Experiment.ND_DefineExperiment.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_DefineExperiment.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ND.Experiment.ND_ExportToTIFF">
+            <summary>
+            ND_ExportToTIFF
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.Experiment.ND_ExportToTIFF.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.Experiment.ND_ExportToTIFF.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_ExportToTIFF.Filename">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_ExportToTIFF.Dest_Directory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_ExportToTIFF.Prefix">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_ExportToTIFF.ChannelExportType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_ExportToTIFF.ApplyLuts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_ExportToTIFF.uiSaveAsMCH">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_ExportToTIFF.iMultiPageMask">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_ExportToTIFF.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ND.Experiment.ND_InsertEvent">
+            <summary>
+            ND_InsertEvent
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.Experiment.ND_InsertEvent.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.Experiment.ND_InsertEvent.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_InsertEvent.EventType">
+            <summary>
+            イベントタイプ(何らかのタグ値?）
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_InsertEvent.EventTime">
+            <summary>
+            msec単位のタイムスタンプ
+            0を送ると現在撮像中のフレーム枚目をNIS上で指定する
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_InsertEvent.EventDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_InsertEvent.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.Experiment.ND_RunExperiment.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.Experiment.ND_RunExperiment.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_RunExperiment.EventDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Experiment.ND_RunExperiment.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.MultiChannel.ND_IsInExperimentCapture.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_AppendMultipointPoint">
+            <summary>
+            This function appends a line to the current multipoint experiment table.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_AppendMultipointPoint.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_AppendMultipointPoint.ND_MultipointXCoord">
+            <summary>
+            The absolute X position of the new point (µm)
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_AppendMultipointPoint.ND_MultipointYCoord">
+            <summary>
+            The absolute Y position of the new point (µm)
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_AppendMultipointPoint.ND_MultipointZCoord">
+            <summary>
+            The absolute Z position of the new point (µm)
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_AppendMultipointPoint.ND_MultipointName">
+            <summary>
+            The name of the variable which will contain the multipoint phase name.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_AppendMultipointPoint.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_MP_GetCount.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_MP_GetCount.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_ResetMultipointExp">
+            <summary>
+            The last used settings of the experiment are stored in memory. 
+            This function removes the settings of the current multipoint experiment.
+            The experiment definition table becomes blank.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_ResetMultipointExp.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.MultiPoint.ND_ResetMultipointExp.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.NDEnableSaveToTIFF.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.NDEnableSaveToTIFF.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.NDEnableSaveToTIFF.ND_EnableSaveToTIFF">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.NDEnableSaveToTIFF.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ND.Stimulation.ND_StimulationResetPhases">
+             <summary>
+            The function removes all phases settings of the 
+            current sequential stimulation experiment.
+             </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.Stimulation.ND_StimulationResetPhases.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Stimulation.ND_StimulationResetPhases.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.Stimulation.ND_RunSequentialStimulationExp.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Stimulation.ND_RunSequentialStimulationExp.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ND.Stimulation.ND_StimulationAppendPhase">
+            <summary>
+            The function appends a time phase to the current sequential stimulation experiment.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.Stimulation.ND_StimulationAppendPhase.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Stimulation.ND_StimulationAppendPhase.PhaseType">
+            <summary>
+            Type of the phase to be appended.
+            -1:Waiting - it only works when the ND_TimeInterval parameter is set to "-1".
+            0:Acquisition
+            1:Stimulation
+            2:Bleaching
+            </summary>
+        </member>
+        <!-- 正しくない形式の XML コメントがメンバー "F:NisMacro.Net.Macro.Macros.ND.Stimulation.ND_StimulationAppendPhase.ND_TimeInterval" で無視されました -->
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Stimulation.ND_StimulationAppendPhase.ND_TimeDuration">
+            <summary>
+            Phase duration [ms].
+            -1:Continuous
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.Stimulation.ND_StimulationAppendPhase.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhase.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhase.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhase.ND_TimeInterval">
+            <summary>
+            イベントタイプ(何らかのタグ値?）
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhase.ND_TimeDuration">
+            <summary>
+            イベントタイプ(何らかのタグ値?）
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhase.ND_TimeCommand">
+            <summary>
+            イベントタイプ(何らかのタグ値?）
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhase.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhaseEx">
+            <summary>
+            This function appends a line to the current timelapse experiment table.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhaseEx.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhaseEx.ND_TimeInterval">
+            <summary>
+            The interval value in [ms]
+            0.0 = No Delay
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhaseEx.ND_TimeCount">
+            <summary>
+            Number of loops to be performed within the time phase.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhaseEx.ND_TimeCommand">
+            <summary>
+            A macro command to be performed before the loop.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhaseEx.ND_PhaseName">
+            <summary>
+            Name of the phase
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_AppendTimePhaseEx.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimeLapsePhaseCount.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimeLapsePhaseCount.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimePhase.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimePhase.ND_TimeIndex">
+            <summary>
+            イベントタイプ(何らかのタグ値?）
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimePhase.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimePhaseSchedule.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimePhaseSchedule.ND_TimePhase">
+            <summary>
+            イベントタイプ(何らかのタグ値?）
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimePhaseSchedule.ND_GetTimeInterval">
+            <summary>
+            イベントタイプ(何らかのタグ値?）
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimePhaseSchedule.ND_GetTimeDuration">
+            <summary>
+            イベントタイプ(何らかのタグ値?）
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimePhaseSchedule.ND_TimeLoopCnt">
+            <summary>
+            イベントタイプ(何らかのタグ値?）
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_GetTimePhaseSchedule.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_ResetTimeExp">
+            <summary>
+            The last used settings of the experiment are stored in memory. 
+            This function removes the settings of the current time experiment. 
+            The experiment definition table becomes blank.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_ResetTimeExp.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_ResetTimeExp.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_RunTimeExp.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.TimeLapse.ND_RunTimeExp.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_GetZSeriesExp.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_GetZSeriesExp.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ指定
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_GetZSeriesExp.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_ResetZSeriesExp">
+            <summary>
+            The last used settings of the experiment are stored 
+            in memory. This function removes the settings of 
+            the current Z-series experiment.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_ResetZSeriesExp.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_ResetZSeriesExp.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp">
+            <summary>
+            The ND_SetZSeriesExp function enables to set parameters of the 
+            current Z-series acquisition setting in the ND Acquisition dialog box.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp.ND_LpZSeriesType">
+            <summary>
+            Defines type of capturing frames in Z-Series.
+            0:Bottom-Top mode.
+            2:Mode with symmetrical range.
+            3:Mode with asymmetrical range.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp.ND_LpZSeriesTop">
+            <summary>
+            Defines absolute top range value in µm
+            (in case of Bottom-Top type), or relative top 
+            range above in µm (for range type) - 
+            same as top yellow box at ZStack Cube.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp.ND_LpZSeriesHome">
+            <summary>
+            Defines absolute home position in µm 
+            (applicable only in range type experiments with ZSeriesHomeDefined = 1).
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp.ND_LpZSeriesBottom">
+            <summary>
+            Defines absolute bottom range value in µm 
+            (in case of Bottom-Top type), or relative 
+            bottom range below in µm (range type) - same as 
+            bottom yellow box at ZStack Cube.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp.ND_LpZSeriesStep">
+            <summary>
+            Defines the step between Z slices in µm.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp.ND_LpZSeriesCount">
+            <summary>
+            Defines number of Z slices. If equals zero, 
+            it is ignored ; for positive values, 
+            the range of experiment is changed according to the step size.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp.ND_LpZSeriesHomeDefined">
+            <summary>
+            This parameter defines absolute home position.
+            If equals zero, ZSeriesHome is ignored and 
+            range experiments are relative.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp.ND_LpZSeriesCloseShuter">
+            <summary>
+            Defines state of the "Close active Shutter during Z Movement" checkbox.
+            1:Close Shutter is enabled
+            0:Close Shutter is disabled
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp.ND_ZSeriesDevice">
+            <summary>
+            Defines name of the Z drive device
+            (from combobox in ZStack Cube). If it is blank, 
+            device is not set.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp.ND_TimeCommandBefore">
+            <summary>
+            A macro command to be performed before each loop.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp.ND_TimeCommandAfter">
+            <summary>
+            A macro command to be performed after each loop.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ND.ZSeries.ND_SetZSeriesExp.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.AddOptConf.CurrOptConf">
+            <summary>
+            Name of the optical configuration to be added to NIS-Elements system optical configurations.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.AddOptConf.Objective">
+            <summary>
+            Name of the objective.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.AddOptConf.NosepieceSetting">
+            <summary>
+            Use current nosepiece position.
+            TRUE  (1):Use current objective and nosepiece position
+            FALSE (0):Do not use nosepiece position
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.AddOptConf.CameraSetting">
+            <summary>
+            Use current camera setting.
+            TRUE  (1):Use current camera setting
+            FALSE (0):Do not use camera setting 
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.AddOptConf.MicroscopeSetting">
+            <summary>
+            Use current microscope setting.
+            TRUE  (1):Use current microscope setting
+            FALSE (0):Do not use microscope setting
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.AddOptConf.ShutterType">
+            <summary>
+            Type of active shutter.
+            -1:Do not use active shutter
+            0 :EPI
+            1 :DIA
+            2 :Camera
+            3 :Unknown
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.AddOptConf.ShutterType2">
+            <summary>
+            Type of second shutter.
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.OpticalConfiguration.BackupOptConf">
+            <summary>
+            This function saves settings of the current optical configurations to an XML file.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.BackupOptConf.FileName">
+            <summary>
+            The path and name of the xml file to be created. E.g. "C:\Backup\OptConf001.xml"
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.OpticalConfiguration.GetOptConfCount">
+            <summary>
+            This function returns a number of defined optical configurations.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.GetOptConfCount.Result">
+            <summary>
+            A number of defined optical configurations.
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.OpticalConfiguration.GetOptConfName">
+            <summary>
+            This function returns the pointer to the name of an optical configuration determined by the Index parameter. It represents one line of a virtual ordered list of defined optical configurations.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.GetOptConfName.Index">
+            <summary>
+            Define the position of the configuration in the configurations list.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.GetOptConfName.CurrOptConf">
+            <summary>
+            The name of the optical configuration according to the Index parameter.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.GetOptConfName.ObjectiveNameMaxLength">
+            <summary>
+            Maximal optical configuration name length. If the name has more characters than defined, it is shortened automatically.
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.OpticalConfiguration.RestoreOptConf">
+            <summary>
+            This function can load optical configurations settings from an XML file.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.RestoreOptConf.FileName">
+            <summary>
+            The path and name of the xml file to be loaded. E.g. "C:\Backup\OptConf001.xml"
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.OpticalConfiguration.SelectOptConf">
+            <summary>
+            The SelectOptConf function enables to select specified optical configuration and makes it active.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.OpticalConfiguration.SelectOptConf.OptConf">
+            <summary>
+            Name of the optical configuration.
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ROI.ChangeROIType">
+            <summary>
+            This function sets the type of the selected ROI. 
+            Different ROI types are used for different purposes.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.ChangeROIType.RoiId">
+            <summary>
+            ROI ID.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.ChangeROIType.RoiType">
+            <summary>
+            Type of the ROI.
+            0:Standard
+            1:Background
+            2:Reference
+            3:Stimulation
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.ChangeROIType.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ROI.ClearMeasROI">
+            <summary>
+            ROIの描画を削除する
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ROI.ClearMeasROI.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.ClearMeasROI.Result">
+            <summary>
+            結果(このマクロでは使用しない)
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.ROI.CreateRectangleROI">
+            <summary>
+            Creates a new rectangle ROI and returns its ID.
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ROI.CreateRectangleROI.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ROI.CreateRectangleROI.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.CreateRectangleROI.CenterX">
+            <summary>
+            X coordinate of the center.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.CreateRectangleROI.CenterY">
+            <summary>
+            Y coordinate of the center.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.CreateRectangleROI.Width">
+            <summary>
+            Image width in pixels.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.CreateRectangleROI.Height">
+            <summary>
+            Image height in pixels.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.CreateRectangleROI.AngleRot">
+            <summary>
+            Orientation of the X axis (width) of the rectangle.
+            The angle is in degrees rising clockwise.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.CreateRectangleROI.ColorRGB">
+             <summary>
+            The color parameter specifies the color of the ROI
+            . Use predefined color constants
+            (RGB_BLUE (16711680), RGB_CYAN (16776960),
+            RGB_GREEN (65280), RGB_MAGENTA (16711935),
+            RGB_RED (255), RGB_WHITE (16777215),
+            RGB_BLACK (0), RGB_YELLOW (65535) or
+            RGB_DEFAULT (2147483647)) or any RGB value.
+            See RGB function for details.
+             </summary>
+        </member>
+        <!-- 正しくない形式の XML コメントがメンバー "F:NisMacro.Net.Macro.Macros.ROI.CreateRectangleROI.Result" で無視されました -->
+        <member name="M:NisMacro.Net.Macro.Macros.ROI.GetROICount.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ROI.GetROICount.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROICount.Result">
+            <summary>
+            結果
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ROI.GetROIIdFromIndex.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ROI.GetROIIdFromIndex.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIIdFromIndex.RoiIndex">
+            <summary>
+            ROI index among visible ROIs. The first index is 0, the last can be obtained using function GetROICount-1
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIIdFromIndex.Result">
+            <summary>
+            結果
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.RoiId">
+            <summary>
+            ROI ID.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.LpBBoxL">
+            <summary>
+            Left bounding box coordinate.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.LpBBoxT">
+            <summary>
+            Top bounding box coordinate.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.LpBBoxR">
+            <summary>
+            Right bounding box coordinate.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.LpBBoxB">
+            <summary>
+            Bottom bounding box coordinate.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.LpCenterX">
+            <summary>
+            X coordinate of the Center.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.LpCenterY">
+            <summary>
+            Y coordinate of the Center.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.LpMinFeret">
+            <summary>
+            If the ROI was an ellipse it is the minor axis.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.LpMaxFeret">
+            <summary>
+            If the ROI was an ellipse it is the major axis.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.LpRotation">
+            <summary>
+            The Orientation of the main axis (along MaxFerret). This value can be directly used in CreateEllipseROI.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.lpColorRGB">
+            <summary>
+            RGB color of the ROI.
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.Macros.ROI.GetROIInfo.Result">
+            <summary>
+            結果
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Macros.NisMacroBase">
+            <summary>
+            マクロ基底クラス
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.Macros.NisMacroBase.MacroName">
+            <summary>
+            マクロ名
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.NisMacroBase.SetDefaultParamater">
+            <summary>
+            デフォルトパラメータを指定するメソッド
+            各マクロで実装を行う
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.NisMacroBase.NisMacro#Net#Macro#NisInterface#IMacro#GetNisParamMemberInfo(NisMacro.Net.Macro.eParamType[])">
+            <summary>
+            NisMacro属性を持つメンバを取得する
+            </summary>
+            <param name="paramTypes">パラメータ種別</param>
+            <returns>フィールドメンバ情報</returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.NisMacroBase.NisMacro#Net#Macro#NisInterface#IMacro#SetNisParamMemberInfo(System.Collections.Generic.List{NisMacro.Net.Macro.ExMemberInfo})">
+            <summary>
+            パラメータをNisMacro属性を持つメンバにセットする
+            </summary>
+            <param name="newMemInfoList">メンバ情報リスト</param>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.NisMacroBase.NisMacro#Net#Macro#NisInterface#IMacro#GetMacroName">
+            <summary>
+            クラスで定義されているマクロ名を返す
+            </summary>
+            <returns>マクロ名</returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Macros.NisMacroBase.NisMacro#Net#Macro#NisInterface#IMacro#CreateCmd">
+            <summary>
+            マクロ実行の準備を行う
+            ここで共有データに値をセットし、マクロ文字列を作成する
+            </summary>
+            <returns>送信用文字列</returns>
+        </member>
+        <member name="T:NisMacro.Net.Macro.CommandManager">
+            <summary>
+            シングルトンのマクロコマンド管理クラス
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.CommandManager.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.CommandManager.GetInstance">
+            <summary>
+            インスタンス取得
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.CommandManager.m_IsExecuting">
+            <summary>
+            コマンドを実行中かどうか
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.CommandManager.NisMacroEventHadler">
+            <summary>
+            Nisコマンドの完了通知デリゲート
+            </summary>
+            <param name="sender">オブジェクト</param>
+            <param name="e">イベント</param>
+        </member>
+        <member name="E:NisMacro.Net.Macro.CommandManager.NisMacroFinishEvent">
+            <summary>
+            Niコマンドの完了通知イベント
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.CommandManager.SetVariable(NisMacro.Net.Macro.NisInterface.IVariable,System.Object)">
+            <summary>
+            Nis上に変数を定義する
+            </summary>
+            <param name="iVariable">IVariableインターフェース継承クラス</param>
+            <param name="value">値</param>
+        </member>
+        <member name="M:NisMacro.Net.Macro.CommandManager.GetVariable(NisMacro.Net.Macro.NisInterface.IVariable)">
+            <summary>
+            Nis上の変数を取得する
+            </summary>
+            <param name="iVariable">IVariableインターフェース継承クラス</param>
+            <returns>値</returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.CommandManager.SendEventTrigger(System.Int32)">
+            <summary>
+            NIS-ElementsからCallされるメソッドイベント
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.CommandManager.SendMacro(NisMacro.Net.Macro.NisInterface.IMacro)">
+            <summary>
+            マクロ実行
+            </summary>
+            <param name="imacro">マクロインターフェース継承済みクラス</param>
+        </member>
+        <member name="M:NisMacro.Net.Macro.CommandManager.SendMacro(NisMacro.Net.Macro.NisInterface.IMacro[])">
+            <summary>
+            マクロ実行(同期)
+            </summary>
+            <param name="iMacros">マクロインターフェース継承済みクラス(先頭より順次実行)</param>
+            <returns>実行結果(引数順)</returns>
+        </member>
+        <member name="P:NisMacro.Net.Macro.CommandManager.ASyncSetting.Imacro">
+            <summary>
+            実行マクロ
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.CommandManager.ASyncSetting.TimeOutMSec">
+            <summary>
+            タイムアウト時間(msec)
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.CommandManager.ASyncSetting.IsTimeout">
+            <summary>
+            タイムアウトしたかどうか
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.CommandManager.ASyncSetting.CallBack">
+            <summary>
+            コールバック関数
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.CommandManager.ASyncSetting.#ctor(NisMacro.Net.Macro.NisInterface.IMacro,NisMacro.Net.Macro.CommandManager.NisMacroEventHadler,System.Int32)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="imacro">マクロ</param>
+            <param name="callBack">コールバック関数</param>
+            <param name="timeOutMSec">タイムアウト時間</param>
+        </member>
+        <member name="M:NisMacro.Net.Macro.CommandManager.SendMacroASync(NisMacro.Net.Macro.NisInterface.IMacro,NisMacro.Net.Macro.CommandManager.NisMacroEventHadler,System.Int32)">
+            <summary>
+            マクロ実行(非同期)
+            </summary>
+            <param name="imacro">マクロインターフェース継承済みクラス</param>
+            <param name="callBack">コールバック先</param>
+            <param name="timeOutMSec">タイムアウト時間(msec)</param>
+        </member>
+        <member name="M:NisMacro.Net.Macro.CommandManager.bgwMacroASync_DoWork(System.Object,System.ComponentModel.DoWorkEventArgs)">
+            <summary>
+            マクロ実行実処理部分(非同期)
+            </summary>
+            <param name="sender">オブジェクト</param>
+            <param name="e">イベント(Argumentに設定情報を付加)</param>
+        </member>
+        <member name="M:NisMacro.Net.Macro.CommandManager.bgwTimeout_DoWork(System.Object,System.ComponentModel.DoWorkEventArgs)">
+            <summary>
+            タイムアウト実処理
+            </summary>
+            <param name="sender">オブジェクト</param>
+            <param name="e">イベント(Argumentに設定情報を付加)</param>
+        </member>
+        <member name="M:NisMacro.Net.Macro.CommandManager.bgwMacroASync_RunWorkerCompleted(System.Object,System.ComponentModel.RunWorkerCompletedEventArgs)">
+            <summary>
+            実行完了
+            </summary>
+            <param name="sender">オブジェクト</param>
+            <param name="e">イベント</param>
+        </member>
+        <member name="T:NisMacro.Net.Macro.NisInterface.IVariable">
+            <summary>
+            Nis変数インターフェース
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.NisInterface.IVariable.CreateSetCmd">
+            <summary>
+            NisMacro送信用のメッセージを作成する
+            </summary>
+            <returns>送信用文字列</returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.NisInterface.IVariable.CreateGetCmd">
+            <summary>
+            NisMacro送信用のメッセージを作成する
+            </summary>
+            <returns>送信用文字列</returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.NisInterface.IVariable.GetVariableType">
+            <summary>
+            タイプ取得
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.NisInterface.IVariable.GetValue">
+            <summary>
+            値取得
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.NisInterface.IVariable.SetValue(System.Object)">
+            <summary>
+            値設定
+            </summary>
+            <param name="val">値</param>
+            <returns></returns>
+        </member>
+        <member name="T:NisMacro.Net.Macro.NisInterface.IMacro">
+            <summary>
+            マクロのインターフェース
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.NisInterface.IMacro.GetNisParamMemberInfo(NisMacro.Net.Macro.eParamType[])">
+            <summary>
+            NisMacro属性を持つメンバを取得する
+            </summary>
+            <param name="paramTypes">パラメータ種別</param>
+            <returns>フィールドメンバ情報</returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.NisInterface.IMacro.GetMacroName">
+            <summary>
+            マクロ名を取得する
+            </summary>
+            <returns>マクロ名</returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.NisInterface.IMacro.CreateCmd">
+            <summary>
+            NisMacro送信用のメッセージを作成する
+            </summary>
+            <returns>送信用文字列</returns>
+        </member>
+        <member name="T:NisMacro.Net.Macro.PublicDefine.TiLightPath">
+            <summary>
+            Tiの光路
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.StoredData">
+            <summary>
+            NisElementsとの値連携用データ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.StoredData._getSetData">
+            <summary>
+            シングルトン実態
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.StoredData.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.StoredData.GetInstance">
+            <summary>
+            唯一のインスタンス取得
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.StoredData._dataList">
+            <summary>
+            データリスト
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.StoredData.AddData(System.Type,System.Object)">
+            <summary>
+            パラメータデータを追加(InterProcessから使用する)
+            </summary>
+            <param name="type">型</param>
+            <param name="val">値</param>
+        </member>
+        <member name="M:NisMacro.Net.Macro.StoredData.GetData">
+            <summary>
+            データリスト取得
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.StoredData.GetData(System.Int32,System.Type)">
+            <summary>
+            パラメータを設定する
+            </summary>
+            <param name="index">Index</param>
+            <param name="type">型</param>
+            <returns></returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.StoredData.SetData(System.Int32,System.Type,System.Object)">
+            <summary>
+            パラメータデータを設定する(InterProcessから使用する)
+            </summary>
+            <param name="index">Index</param>
+            <param name="type">型</param>
+            <param name="val">値</param>
+        </member>
+        <member name="M:NisMacro.Net.Macro.StoredData.ClearDataList">
+            <summary>
+            内部のデータリストを初期化する
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.eParamType">
+            <summary>
+            パラメータタイプ列挙
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.eParamType.InParam">
+            <summary>
+            NisElementsへ入力されるパラメータ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.eParamType.OutParam">
+            <summary>
+            NisElementsから出力されるパラメータ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.eParamType.Return">
+            <summary>
+            戻り値
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.eParamType.Return_Ignore">
+            <summary>
+            戻り値
+            ※戻り値が定義されないマクロに使用する
+            </summary>
+        </member>
+        <member name="T:NisMacro.Net.Macro.NisMacroAttribute">
+            <summary>
+            マクロパラメータアトリビュートクラス
+            マクロへのパラメータの種類を定義する
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.NisMacroAttribute.ParamType">
+            <summary>
+            パラメータタイプ
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.NisMacroAttribute.Index">
+            <summary>
+            インデックス
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.NisMacroAttribute.IsPointer">
+            <summary>
+            ポインタ参照するかどうか
+            </summary>
+        </member>
+        <member name="F:NisMacro.Net.Macro.NisMacroAttribute.ArraySize">
+            <summary>
+            リストで取得する場合、サイズ
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.NisMacroAttribute.#ctor(NisMacro.Net.Macro.eParamType,System.Int32,System.Boolean)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="paramType">パラメータタイプ</param>
+            <param name="index">In、Outを含めたIndex番号 1オリジンとし、0はReturnとして定義する</param>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Utility">
+            <summary>
+            マクロ関係のユーティリティ静的クラス
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Utility.GetINisMacroTypes">
+            <summary>
+            Imacroを継承したTypeのListを返す
+            </summary>
+            <returns>IMacroを継承したクラス</returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Utility.CheckInvalid(NisMacro.Net.Macro.NisInterface.IMacro)">
+            <summary>
+            クラスの妥当性チェックメソッド
+            NisElementsに渡したときにエラーが発生するような条件にならないようにチェックするためのメソッド
+            </summary>
+            <param name="iMacro">インターフェース</param>
+            <returns></returns>
+        </member>
+        <member name="T:NisMacro.Net.Macro.Variable.NisVariableBase">
+            <summary>
+            Nis上の変数アクセスクラス定義
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.Variable.NisVariableBase.VarType">
+            <summary>
+            変数タイプ
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.Variable.NisVariableBase.VarName">
+            <summary>
+            変数名
+            </summary>
+        </member>
+        <member name="P:NisMacro.Net.Macro.Variable.NisVariableBase.IsGlobal">
+            <summary>
+            グローバル変数かどうか
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Variable.NisVariableBase.NisMacro#Net#Macro#NisInterface#IVariable#GetVariableType">
+            <summary>
+            変数タイプを取得
+            </summary>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Variable.NisVariableBase.NisMacro#Net#Macro#NisInterface#IVariable#GetValue">
+            <summary>
+            NisからGlobal変数を取得する
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Variable.NisVariableBase.#ctor(System.Type,System.String)">
+            <summary>
+            コンストラクタ1
+            </summary>
+            <param name="type">種別</param>
+            <param name="name">変数名</param>
+            <param name="name"></param>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Variable.NisVariableBase.#ctor(System.Type,System.String,System.Object,System.Boolean)">
+            <summary>
+            コンストラクタ2
+            </summary>
+            <param name="type">種別</param>
+            <param name="name">変数名</param>
+            <param name="defaultVal">デフォルト値</param>
+            <param name="isGlobal">グローバルかどうか</param>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Variable.NisVariableBase.NisMacro#Net#Macro#NisInterface#IVariable#CreateSetCmd">
+            <summary>
+            NISにインスタンスする用の文字列を作成する
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Variable.NisVariableBase.NisMacro#Net#Macro#NisInterface#IVariable#CreateGetCmd">
+            <summary>
+            Nisから取得するコマンド文字列を作成する
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NisMacro.Net.Macro.Variable.NisVariableBase.GetNisVariable(System.Type,System.String)">
+            <summary>
+            Nis上のグローバル変数を取得
+            </summary>
+            <param name="type">型</param>
+            <param name="name">変数名</param>
+            <returns>変数値(見つからない場合、nullを返す)</returns>
+        </member>
+    </members>
+</doc>

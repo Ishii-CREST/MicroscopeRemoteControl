@@ -1,0 +1,28 @@
+// NisElements連携用ライブラリ
+import ("NisMacro.Net.Interprocess.dll");
+
+import char GetCharVal(int aiIndex);
+import byte GetByteVal(int aiIndex);
+import short GetShortVal(int aiIndex);
+import word GetWordVal(int aiIndex);
+import int GetIntVal(int aiIndex);
+import dword GetUintVal(int aiIndex);
+import double GetDoubleVal(int aiIndex);
+import long GetLongVal(int aiIndex);
+import int GetStringVal(int aiIndex, wchar_t* awpVal);
+//import int GetDoubleArrayVal(int aiIndex, double* adpVal);
+//import int GetIntArrayVal(int aiIndex, int* aipVal);
+
+import int SetCharVal(int aiIndex, char acVal);
+import int SetByteVal(int aiIndex, byte abVal);
+import int SetShortVal(int aiIndex, short asVal);
+import int SetWordVal(int aiIndex, word ausVal);
+import int SetIntVal(int aiIndex, int aiVal);
+import int SetUintVal(int aiIndex, dword auiVal);
+import int SetDoubleVal(int aiIndex, double adVal);
+import int SetLongVal(int aiIndex, long alVal);
+import int SetStringVal(int aiIndex, wchar_t* aspVal);
+//import int SetDoubleArrayVal(int aiIndex, double* adpVal, int aiArrayLen);
+//import int SetIntArrayVal(int aiIndex, int* aipVal, int aiArrayLen);
+
+import int EventTrigger(int aiType);

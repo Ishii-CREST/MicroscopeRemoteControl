@@ -1,0 +1,12 @@
+﻿D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets(2110,5): warning MSB3245: この参照を解決できませんでした。アセンブリ "NisMacro.Net.Debug" が見つかりませんでした。アセンブリが間違いなくディスクに存在することを確認してください。 コードにこの参照が必要な場合、コンパイル エラーが発生する可能性があります。
+D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets(2110,5): warning MSB3270: 構築されているプロジェクトのプロセッサ アーキテクチャ "x86" と、参照 "NisMacro.Net.Interprocess" のプロセッサ アーキテクチャ "AMD64" の間には不一致がありました。この不一致は、ランタイム エラーを発生させる可能性があります。プロジェクトと参照の間でプロセッサ アーキテクチャが一致するように、構成マネージャーを使用してターゲットとするプロジェクトのプロセッサ アーキテクチャを変更するか、ターゲットとするプロジェクトのプロセッサ アーキテクチャに一致するプロセッサ アーキテクチャとの依存関係を参照で設定することを検討してください。
+D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets(2110,5): warning MSB3270: 構築されているプロジェクトのプロセッサ アーキテクチャ "x86" と、参照 "NisMacro.Net.Macro" のプロセッサ アーキテクチャ "AMD64" の間には不一致がありました。この不一致は、ランタイム エラーを発生させる可能性があります。プロジェクトと参照の間でプロセッサ アーキテクチャが一致するように、構成マネージャーを使用してターゲットとするプロジェクトのプロセッサ アーキテクチャを変更するか、ターゲットとするプロジェクトのプロセッサ アーキテクチャに一致するプロセッサ アーキテクチャとの依存関係を参照で設定することを検討してください。
+  Stdafx.cpp
+  AssemblyInfo.cpp
+  NisMacro.Net.Core.cpp
+  コードを生成中...
+  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1216,5): warning MSB8012: TargetPath(D:\WORK\WORK\Git\阪大マクロ\Src\HTTPServer\HttpConnect\NisMacroFramework\NisMacro.Net\Release\NisMacro.Net.Core.dll) が Linker の OutputFile プロパティ値 (D:\WORK\WORK\Git\阪大マクロ\Src\HTTPServer\HttpConnect\NisMacroFramework\Dll\NisMacro.Net.Core.dll) と一致しません。このため、プロジェクトが正常にビルドされない可能性があります。この問題を解決するには、$(OutDir)、$(TargetName)、および $(TargetExt) の各プロパティ値が、%(Link.OutputFile) で指定されている値と一致することを確認してください。
+Module.def(1): warning LNK4093: ドライブ/ディレクトリ コンポーネントは 'LIBRARY' ステートメント内で無視されます。
+     ライブラリ ..\..\Dll\NisMacro.Net.Core.lib とオブジェクト ..\..\Dll\NisMacro.Net.Core.exp を作成中
+  NisMacro.Net.Core.vcxproj -> D:\WORK\WORK\Git\阪大マクロ\Src\HTTPServer\HttpConnect\NisMacroFramework\NisMacro.Net\Release\NisMacro.Net.Core.dll

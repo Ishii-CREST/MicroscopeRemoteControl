@@ -1,0 +1,16 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly NisMacro.Net.Setting, Version=1.0.*, Culture=ロケールに依存しない言語 (ロケールに依存しない国): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class NisMacro.Net.DefaultSetting: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    System.String INCLUDE_FILE_PATH = \Macros\NisMacro.net_Inc.mac : Public, Static, Literal, HasDefault
+Class NisMacro.Net.Setting.MacroSetting: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    System.String MacroIncludeFilePath 'get set' : 
+    NisMacro.Net.Setting.MacroSetting Instance 'get ' : 
+  Methods:
+    get_MacroIncludeFilePath(): PrivateScope, Public, HideBySig, SpecialName
+    set_MacroIncludeFilePath(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Instance(): PrivateScope, Public, Static, HideBySig, SpecialName

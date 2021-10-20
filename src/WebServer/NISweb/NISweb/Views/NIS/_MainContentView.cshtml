@@ -1,0 +1,61 @@
+﻿
+<div id="index_update_div">
+        <table id="system_status_table">
+            <tr>
+                <th><h3>System Status</h3></th>
+            </tr>
+            <tr>
+                <td><input class="main_status_update_button" type="submit" name="Connect" value="Connect" /></td>
+                <td>
+                    <ul>
+                        <li class="connection_status_li">
+                            <ul class="connection_status_ul">
+                                <li class="connection_status_child_li">Connection: <p id="connection_status" style="display:inline">@ViewBag.ConnectionStatus</p></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </td>
+                @*<td>
+                    <ul class="connection_lading_ul">
+                        <li class="connection_lading_li"><img src="~/Content/Doc/pc.png" /></li>
+                        <li class="connection_lading_server_li"><img src="~/Content/Doc/loading.gif" /></li>
+                        <li class="connection_lading_li"><img src="~/Content/Doc/server.png" /></li>
+                    </ul>
+                </td>*@
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th><h3>Microscope Info</h3></th>
+            </tr>
+
+            <tr class="maintable_tr">
+                <td><input class="main_status_update_button" type="submit" name="IsInExperiment" value="IsInExperiment" /></td>
+                <td>
+                    <ul>
+                        <li class="status_li_iscapture_title">
+                            <ul class="status_ul">
+                                <li class="status_li"><p>ND_IsInExperimentCapture : @ViewBag.RunAcquisition</p></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input class="main_status_update_button" type="submit" name="StageLocation" value="StageLocation" /></td>
+                <td>
+                    <ul class="status_ul">
+                        <li class="status_li_title">Coordinate</li>
+                        <li>
+                            <ul class="status_ul">
+                                <li class="status_li"><p>Stage X :   @ViewBag.Xstg um</p></li>
+                                <li class="status_li"><p>Stage Y :   @ViewBag.Ystg um</p></li>
+                                <li class="status_li"><p>Stage Z :   @ViewBag.Zstg um</p></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+</div>

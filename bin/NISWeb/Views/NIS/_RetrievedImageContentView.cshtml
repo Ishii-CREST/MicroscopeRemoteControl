@@ -1,0 +1,59 @@
+﻿@{ 
+    var imageName = ViewBag.CurrentImageName as string[];
+    var imageData = ViewBag.CurrentImage as List<string>;
+    var errorMessageStr = ViewBag.ErrorMessageStr as string;
+    var deleteMessage = ViewBag.DeleteMessage as string;
+}
+
+<div class="retrieved_top_div">
+
+    @{
+        if (!string.IsNullOrEmpty(errorMessageStr))
+        {
+            <div>
+                <ul>
+                    <li>アクセス拒否</li>
+                    <li>@errorMessageStr</li>
+                </ul>
+            </div>
+        }
+        if (!string.IsNullOrEmpty(deleteMessage))
+        {
+            <div>
+                <ul>
+                    <li>ファイル削除拒否</li>
+                    <li>@deleteMessage</li>
+                </ul>
+            </div>
+        }
+    }
+
+    @{
+        if (0 < imageName.Count())
+        {
+            <table class="retrieved_image_table">
+                <tr>
+                    @{
+                        foreach (var name in imageName)
+                        {
+                            <th>@name</th>
+                        }
+                    }
+                </tr>
+                <tr>
+                    @{
+                        foreach (string data in imageData)
+                        {
+                            <!--<td><img src="@Url.Content(data)" width="451" height="314" /></td>-->
+                            <td><img class="current_image" src="@Url.Content(data)" /></td>
+                        }
+                    }
+                </tr>
+            </table>
+        }
+        else
+        {
+            <div class="no_image_data">No Data</div>
+        }
+    }
+</div>

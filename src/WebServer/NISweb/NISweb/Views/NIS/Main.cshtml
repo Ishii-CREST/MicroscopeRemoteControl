@@ -1,0 +1,19 @@
+﻿@{
+     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm(
+        "Main",
+        "NIS",
+        FormMethod.Post
+        ))
+{
+    
+    <div class="main_content_body_div">
+
+        <div id="main_own_ajax">
+            @Html.Action("MainContent", "NIS")
+        </div>
+    </div>
+}

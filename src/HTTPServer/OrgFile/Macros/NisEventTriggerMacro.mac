@@ -1,0 +1,12 @@
+#include "Macros\NisMacro.Net_Inc.mac"
+
+// this file is sample macro file.
+
+int main()
+{
+   
+   EventTrigger(1);		// arg is type of event.
+
+   return 0;
+}
+ 

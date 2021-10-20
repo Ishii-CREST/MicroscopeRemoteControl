@@ -1,0 +1,144 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "image";
+}
+
+
+<table class="XYZ_adjust_table_head">
+    <tr>
+        <td>
+            <input class="image_button" type="submit" name="stage_button" value="Live" />
+        </td>
+        <td>
+            <input class="image_button" type="submit" name="stage_button" value="Image" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input id="image_freeze_button" type="submit" name="stage_button" value="Freeze Live" />
+        </td>
+    </tr>
+</table>
+
+
+<div id="in_frame_left_div">
+    <!-- 今は仮置き。実際はフォームロード時にNISから対象データを取得して表示させる -->
+    <img id="target_img" src="~/Content/malus.jpg" />
+</div>
+
+<div id="img_frame_right_div">
+    <table>
+        <tr>
+            <td class="img_frametd">
+                <div class="element_div in_frame_div">
+
+                    <div class="image_add_row">
+                        <input id="XYZ_adjust_table_location" type="checkbox" name="condition_check" />location (Please check when adding to the condition.)
+                    </div>
+
+                    <div class="XYZ_adjust_table_div">
+
+                        <button class="XYZ_adjust_add_row_button" type="button">add row</button>
+
+                        <table class="XYZ_adjust_table" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>X[mm]</th>
+                                    <th>Y[mm]</th>
+                                    <th>Z[mm]</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><input type="text" name="param_List"></td>
+                                    <td><input type="text" name="param_List"></td>
+                                    <td><input type="text" name="param_List"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="image_add_row">
+                        <input id="shooting_interval_table_location" type="checkbox" name="condition_check" />time (Please check when adding to the condition.)
+                    </div>
+
+                    <div class="shooting_interval_table_div">
+
+                        <button class="shooting_interval_add_row_button" type="button">add row</button>
+
+                        <table class="shooting_interval_table">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Interval</th>
+                                    <th>Duration</th>
+                                    <th>Loops</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <input type="text" name="param_List">
+                                        <select size="1">
+                                            <option>msec</option>
+                                            <option>sec</option>
+                                            <option>min</option>
+                                            <option>hour(s)</option>
+                                            <option>No delay</option>
+                                            <option>No acquisition</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="param_List">
+                                        <select size="1">
+                                            <option>msec</option>
+                                            <option>sec</option>
+                                            <option>min</option>
+                                            <option>hour(s)</option>
+                                            <option>Continuous</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" name="param_List"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="image_add_row">
+                        <input id="setting_roi_table_location" type="checkbox" name="condition_check" />roi (Please check when adding to the condition.)
+                    </div>
+
+                    <div id="setting_roi_table_div">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>X1</th>
+                                    <th>Y1</th>
+                                    <th>X2</th>
+                                    <th>Y2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><input type="text" name="param_List"></td>
+                                    <td><input type="text" name="param_List"></td>
+                                    <td><input type="text" name="param_List"></td>
+                                    <td><input type="text" name="param_List"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

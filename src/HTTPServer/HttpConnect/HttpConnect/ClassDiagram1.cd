@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HttpConnect.API.NisSettingCommander" Collapsed="true">
+    <Position X="90.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAABAAQAAAAA=</HashCode>
+      <FileName>API\NIS-Elements\NisSettingCommander.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Images.Capture" Collapsed="true">
+    <Position X="23" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Images\Capture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Images.GetNewestImageDir" Collapsed="true">
+    <Position X="34.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Images\GetNewestImageDir.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Images.GetNewestImageList" Collapsed="true">
+    <Position X="47.25" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Images\GetNewestImageList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Images.ND_RunExperiment" Collapsed="true">
+    <Position X="56.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAACgAAAAAAABAAACAAAAAAAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Images\ND_RunExperiment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Images.ND_RunSequentialStimulationExp" Collapsed="true">
+    <Position X="68" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Images\ND_RunSequentialStimulationExp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraGet_CHnLaserStimulationPower" Collapsed="true">
+    <Position X="79.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Info\CameraGet_CHnLaserStimulationPower.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraGet_ImagingScannerWidth" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Info\CameraGet_ImagingScannerWidth.cs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraGet_IRLasernWavelength" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Info\CameraGet_IRLasernWavelength.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraGet_LineAveraging" Collapsed="true">
+    <Position X="25.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Info\CameraGet_LineAveraging.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraGet_ScanFrameRateIndex" Collapsed="true">
+    <Position X="36.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Info\CameraGet_ScanFrameRateIndex.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraGet_StimulationTime" Collapsed="true">
+    <Position X="44.5" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Info\CameraGet_StimulationTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraSet_CHnChannelLaserIndex" Collapsed="true">
+    <Position X="59" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\CameraSet_CHnChannelLaserIndex.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraSet_CHnLaserPower" Collapsed="true">
+    <Position X="70.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\CameraSet_CHnLaserPower.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraSet_CHnLaserStimulationPower" Collapsed="true">
+    <Position X="81.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAgAAAAAAABAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\CameraSet_CHnLaserStimulationPower.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraSet_ImagingScannerWidth" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\CameraSet_ImagingScannerWidth.cs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraSet_IRLasernWavelength" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAEAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\CameraSet_IRLasernWavelength.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraSet_LineAveraging" Collapsed="true">
+    <Position X="27.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\CameraSet_LineAveraging.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraSet_ImagingZoom" Collapsed="true">
+    <Position X="38.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\CameraSet_ImagingZoom.cs</FileName>
+      <NewMemberFileName>API\NIS-Elements\Settings\ChangeROIType.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CameraSet_StimulationTime" Collapsed="true">
+    <Position X="50" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAYA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\CameraSet_StimulationTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.ClearMeasROI" Collapsed="true">
+    <Position X="61.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\ClearMeasROI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.CreateRectangleROI" Collapsed="true">
+    <Position X="72.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAQAIAABgAAAAAAAAAAAABAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\CreateRectangleROI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.ND_AppendMultipointPoint" Collapsed="true">
+    <Position X="83.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAQAAAAIAAAAAAAAAQAII=</HashCode>
+      <FileName>API\NIS-Elements\Settings\ND_AppendMultipointPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.ND_AppendTimePhaseEx" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAQBCAAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\ND_AppendTimePhaseEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.ND_ResetMultipointExp" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\ND_ResetMultipointExp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.ND_ResetTimeExp" Collapsed="true">
+    <Position X="29.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\ND_ResetTimeExp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.ND_ResetZSeriesExp" Collapsed="true">
+    <Position X="41" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\ND_ResetZSeriesExp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.ND_SetZSeriesExp" Collapsed="true">
+    <Position X="52.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEACAIgAAAKABAAAAAAACAAABAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\ND_SetZSeriesExp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.ND_StimulationAppendPhase" Collapsed="true">
+    <Position X="63.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAgAAAAAAAAAAACAAAAAAAAAAAAAAAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\ND_StimulationAppendPhase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.ND_StimulationResetPhases" Collapsed="true">
+    <Position X="74.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\ND_StimulationResetPhases.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.StgMoveXY" Collapsed="true">
+    <Position X="86" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\StgMoveXY.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Settings.StgMoveZ" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAQAIA=</HashCode>
+      <FileName>API\NIS-Elements\Settings\StgMoveZ.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Info.GetCurrentNDExpImageCount" Collapsed="true">
+    <Position X="18.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAgAAgAAAAQAAAAAAACAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Info\GetCurrentNDExpImageCount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Info.GetCurrentNDExpXYZ" Collapsed="true">
+    <Position X="32" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAgAAgAAAAQAAAAAAACAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Info\GetCurrentNDExpXYZ.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Info.GetNDExperimentImageCount" Collapsed="true">
+    <Position X="41.25" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Info\GetNDExperimentImageCount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Info.ND_IsInExperimentCapture" Collapsed="true">
+    <Position X="54.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Info\ND_IsInExperimentCapture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Info.ND_MP_GetCount" Collapsed="true">
+    <Position X="65.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Info\ND_MP_GetCount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Info.RangeOfND_GetZSeriesExp" Collapsed="true">
+    <Position X="77" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Info\RangeOfND_GetZSeriesExp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Info.StepOfND_GetZSeriesExp" Collapsed="true">
+    <Position X="88.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Info\StepOfND_GetZSeriesExp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Info.StgGetPosXY" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Info\StgGetPosXY.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.Info.StgGetPosZ" Collapsed="true">
+    <Position X="20.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>API\NIS-Elements\Info\StgGetPosZ.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.API.NIS_Elements.NisAPIBase">
+    <Position X="44.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAIAACAAAAAAAAAAAAEAAAAEIIAAABAAAAAEUAIA=</HashCode>
+      <FileName>API\NIS-Elements\NisAPIBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HttpConnect.APIUtil.NIS_Elements.APIFactrory" BaseTypeListCollapsed="true">
+    <Position X="89.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAIAAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAA=</HashCode>
+      <FileName>APIUtil\NIS-Elements\APIFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HttpConnect.CommonDefine" Collapsed="true">
+    <Position X="92.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAACAAAAAAAAAAgQAAAAAAAAAAAAAAAAACAgQAAA=</HashCode>
+      <FileName>Common\CommonDefine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.LogManage" Collapsed="true">
+    <Position X="94.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAACAIAAAAEAAAAAQAAAAAIAAAA=</HashCode>
+      <FileName>Log\LogManage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.Program" Collapsed="true">
+    <Position X="92.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAIAAQAABAAgAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.RequestRelated" Collapsed="true">
+    <Position X="97.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAIAAAAAAAAAEAAACAAAIAAAQAAAIAAEAAA=</HashCode>
+      <FileName>RequestRelated.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.Resource1" Collapsed="true">
+    <Position X="90.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.FilePathCreator" Collapsed="true">
+    <Position X="96" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACAAA=</HashCode>
+      <FileName>UserUtil\FilePathCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.EventArg.ReceiveAPIEventArg" Collapsed="true">
+    <Position X="94.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EventArg\ReceiveAPIEventArg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.Forms.HTTPserver" Collapsed="true">
+    <Position X="92.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAAAAACAQAgAAAACAAAQCAAAAAAAAEYAAAAAAAAA=</HashCode>
+      <FileName>Forms\HTTPserver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.HttpUtil.Data.HttpResponseData" Collapsed="true">
+    <Position X="90.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAQAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>HttpUtil\Data\HttpResponseData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.HttpUtil.Data.ReceivedRequestData" Collapsed="true">
+    <Position X="96" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAABAAAAAAAAAAAAAABAAAAIAAAAAAAAAAAIAA=</HashCode>
+      <FileName>HttpUtil\Data\ReceivedRequestData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.HttpUtil.HttpIntercept" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="97.75" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="HttpConnect.HttpUtil.HttpIntercept._OnReceiveAPI" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HttpUtil\HttpIntercept.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAIABAAgCAAAQAAEAAAAACAAAAAAECBAAAAAgAAAQA=</HashCode>
+      <FileName>HttpUtil\HttpIntercept.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HttpConnect.InternalData.CommonInternal" Collapsed="true">
+    <Position X="94.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAQAABAAAAAAA=</HashCode>
+      <FileName>InternalData\CommonInternal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.InternalData.NIS_Elements.NDExperimentInfo" Collapsed="true">
+    <Position X="96" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACgAAAAAAQBAAAAAAAAgAAAAAAIAAEAAAA=</HashCode>
+      <FileName>InternalData\NIS_Elements\NDExperimentInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.InternalData.NIS_Elements.NisInternalData" Collapsed="true">
+    <Position X="97.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAIAAIAAQABAAAAAACABEAAAAAAQAAADAAAAAA=</HashCode>
+      <FileName>InternalData\NIS_Elements\NisInternalData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.Properties.Resources" Collapsed="true">
+    <Position X="92.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.Properties.Settings" Collapsed="true">
+    <Position X="94.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAIAIIAAAAABCAAAAAAAAAIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HttpConnect.UserUtil.UtilMethods" Collapsed="true">
+    <Position X="96" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAEAAAABAAAAA=</HashCode>
+      <FileName>UserUtil\UtilMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="HttpConnect.API.IAPIBase">
+    <Position X="86.5" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAEAAA=</HashCode>
+      <FileName>API\IAPIBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="HttpConnect.APIUtil.IAPIFactory">
+    <Position X="92.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>APIUtil\IAPIFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Yu Gothic UI" Size="9" />
+</ClassDiagram>

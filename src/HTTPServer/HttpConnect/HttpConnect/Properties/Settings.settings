@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HttpConnect.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PORT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5005</Value>
+    </Setting>
+    <Setting Name="IMAGE_SAVE_PATH" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\NIS-Elements\Images</Value>
+    </Setting>
+    <Setting Name="WEB_SERVER_ROOT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\inetpub\wwwroot</Value>
+    </Setting>
+    <Setting Name="APP_LOG_MAX_COUNT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="API_LOG" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\NIS-Elements\HttpConnect\logs\API</Value>
+    </Setting>
+    <Setting Name="APP_LOG" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\NIS-Elements\HttpConnect\logs\APP</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

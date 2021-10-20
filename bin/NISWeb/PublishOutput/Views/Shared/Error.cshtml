@@ -1,0 +1,22 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{ 
+    ViewBag.Tile = "Error";
+}
+
+<h2>Error occurred during processing</h2>
+
+<table class="table">
+    <tr>
+        <th>発生元</th>
+        <td>@Model.ControllerName/@Model.ActionName</td>
+    </tr>
+    <tr>
+        <th>例外</th>
+        <td>@Model.Exception.GetType().Name</td>
+    </tr>
+    <tr>
+        <th>メッセージ</th>
+        <td>@Model.Exception.Message</td>
+    </tr>
+</table>

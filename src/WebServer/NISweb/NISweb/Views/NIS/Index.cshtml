@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm(
+        "Index",
+        "NIS",
+        FormMethod.Post
+        ))
+{
+    <input class="index_update_button" type="submit" name="update" value="update" />
+    <div class="content_body_div">
+
+        <div id="own_ajax">
+            @Html.Action("MainContent", "NIS")
+        </div>
+    </div>
+
+    <div class="footer_div">
+        <a href="~/Content/Doc/test.pdf">説明書</a>
+    </div>
+}

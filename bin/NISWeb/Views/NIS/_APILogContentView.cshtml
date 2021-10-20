@@ -1,0 +1,57 @@
+﻿@{
+    var date = ViewBag.APIDate as List<string>;
+    var ip = ViewBag.ClientIP as List<string>;
+    var apiName = ViewBag.APIName as List<string>;
+    var status = ViewBag.Status as List<string>;
+    var errorMessageStr = ViewBag.ErrorMessageStr as string;
+    var deleteMessage = ViewBag.DeleteMessage as string;
+}
+
+
+<div class="content_body_div">
+
+    @{
+        if (!string.IsNullOrEmpty(errorMessageStr))
+        {
+            <div>
+                <ul>
+                    <li>アクセス拒否</li>
+                    <li>@errorMessageStr</li>
+                </ul>
+            </div>
+        }
+        if (!string.IsNullOrEmpty(deleteMessage))
+        {
+            <div>
+                <ul>
+                    <li>ファイル削除拒否</li>
+                    <li>@deleteMessage</li>
+                </ul>
+            </div>
+        }
+    }
+
+    <table id="api_log_table">
+        <thead>
+            <tr>
+                <th>Run Time</th>
+                <th>Client</th>
+                <th>Instruction</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                for (int i = 0; i < date.Count(); i++)
+                {
+                    <tr>
+                        <td>@date[i]</td>
+                        <td>@ip[i]</td>
+                        <td>@apiName[i]</td>
+                        <td>@status[i]</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

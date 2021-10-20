@@ -1,0 +1,11 @@
+import ("HTTPConnect\HttpConnect.Core.dll");
+import int StartHttpConnect();
+
+int main()
+{
+   
+   StartHttpConnect();
+
+   return 0;
+}
+ 

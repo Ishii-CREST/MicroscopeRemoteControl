@@ -1,0 +1,45 @@
+﻿@{ 
+    var path = ViewBag.FullPath as string[];
+    var time = ViewBag.CreationTime as string[];
+    var length = ViewBag.Length as string[];
+    var link = ViewBag.Link as string[];
+
+    if (null == link)
+    {
+        link = new string[path.Count()];
+    }
+}
+
+<div>
+    <h4>Monitoring Folder : @ViewBag.ImageDir</h4>
+</div>
+
+<div id="imagelist_table_div">
+    <table id="image_list_table">
+        <thead>
+            <tr>
+                <th>Save Time</th>
+                <th>File Path</th>
+                <th>File Size</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            @{
+                for (int i = 0; i < path.Count(); i++)
+                {
+                   
+                    <tr>
+                        <td>@time[i]</td>
+                        <td>@path[i]</td>
+                        <td>@length[i] KB</td>
+                        <td>
+                            <button class="image_download_button" type="submit" name="download" value="@path[i]">DL</button>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

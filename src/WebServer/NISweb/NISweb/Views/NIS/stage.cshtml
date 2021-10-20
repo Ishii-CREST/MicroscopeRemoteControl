@@ -1,0 +1,63 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "stage";
+}
+
+
+<div class="element_div">
+    @using (Html.BeginForm(
+        "stage",
+        "MainPage",
+        FormMethod.Get
+        ))
+    {
+        
+        <table id="XY_adjust_table" style="margin-bottom:50px">
+            <tr>
+                <th>XY - TiXYDrive</th>
+            </tr>
+            <tr>
+                <td>
+                    <input class="stage_button" type="submit" name="" value="XY-Move" />
+                </td>
+                <td>
+                    <div>
+                        X[μm]:  <input type="text" name="stage_x" style="ime-mode: disabled" />   Range: <-55.000, 55.000> mm
+                    </div>
+                    <div>
+                        Y[μm]:  <input type="text" name="stage_y" style="ime-mode: disabled" />   Range: <-37.000, 37.000> mm
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <table id="Z_adjust_table" style="margin-bottom:50px">
+            <tr>
+                <th>Z - TiZDrive</th>
+            </tr>
+            <tr>
+                <td>
+                    <input class="stage_button" type="submit" name="stage_button" value="Z-Move" />
+                </td>
+                <td>Z[μm]:  <input type="text" name="stage_z" style="ime-mode: disabled" />   Range: <0.0, 10000.0> mm</td>
+            </tr>
+        </table>
+
+        <table id="Z2_adjust_table">
+            <tr>
+                <th>Z2 - Piezo Z </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class="stage_button" type="submit" name="stage_button" value="Z2-Move" />
+                </td>
+                <td>Z[μm]:  <input type="text" name="stage_piezo" style="ime-mode: disabled" />   Range: <-49.900, 49.900> mm</td>
+            </tr>
+        </table>
+    }
+</div>

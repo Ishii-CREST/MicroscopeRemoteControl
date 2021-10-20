@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{66F60DBB-BC37-4F78-A38E-FAD1E2B454EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NisMacro.Net.Macro</RootNamespace>
+    <AssemblyName>NisMacro.Net.Macro</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Dll\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Dll\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\Dll\NisMacro.Net.Macro.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Dll\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\Dll\NisMacro.Net.Macro.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\Dll\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NisMacro.Net.Interprocess, Version=1.0.6593.31990, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dll\NisMacro.Net.Interprocess.dll</HintPath>
+    </Reference>
+    <Reference Include="NisMacro.Net.Setting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dll\NisMacro.Net.Setting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Define.cs" />
+    <Compile Include="ExMemberInfo.cs" />
+    <Compile Include="MacroEventArg.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraGet_CHnLaserPower.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraGet_ImagingScannerHeight.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraGet_ImagingScannerWidth.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraGet_ImagingUseImagingChannelBit.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraGet_ScanAreaAspect.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraGet_LineAveraging.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraGet_ScanFrameRateIndex.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraSet_ImagingScannerWidth.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraSet_IRLasernWavelength.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraGet_IRLasernWavelength.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraSet_CHnLaserStimulationPowern.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraGet_CHnLaserStimulationPowern.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraGet_ImagingZoom.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraSet_CHnChannelLaserIndex.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraSet_CHnLaserPower.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraSet_ImagingZoom.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraSet_LineAcquireMode.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraSet_LineAveraging.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraSet_ScanFrameRateIndex.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraGet_StimulationTimen.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\CameraSet_StimulationTimen.cs" />
+    <Compile Include="Macros\Acquire\Camera\Properties\Define.cs" />
+    <Compile Include="Macros\Acquire\Capture\Capture.cs" />
+    <Compile Include="Macros\Acquire\ND_IsAcqTabChecked.cs" />
+    <Compile Include="Macros\Acquire\Twain\Freeze.cs" />
+    <Compile Include="Macros\Acquire\Twain\Live.cs" />
+    <Compile Include="Macros\AdvancedAPI\InterProcess\Int_ExecuteCommand.cs" />
+    <Compile Include="Macros\Calibration\GetCalibrationViewUnit.cs" />
+    <Compile Include="Macros\Calibration\GetCalibrationViewPrecision.cs" />
+    <Compile Include="Macros\Calibration\SetCalibrationViewUnit.cs" />
+    <Compile Include="Macros\Calibration\SetCalibrationViewPrecision.cs" />
+    <Compile Include="Macros\Calibration\Get_CurrentCalibration.cs" />
+    <Compile Include="Macros\Compatibility\Get_Calibration.cs" />
+    <Compile Include="Macros\ConfocalA1\A1ApplyStimulationSettings.cs" />
+    <Compile Include="Macros\Device\Nosepiece\Stg_GetNosepieceObjectiveName.cs" />
+    <Compile Include="Macros\Device\Nosepiece\Stg_GetNosepiecePosition.cs" />
+    <Compile Include="Macros\Device\Nosepiece\Stg_IsNosepiecePresent.cs" />
+    <Compile Include="Macros\Device\Nosepiece\Stg_SetNosepiecePosition.cs" />
+    <Compile Include="Macros\Device\XY\StgGetPosXY.cs" />
+    <Compile Include="Macros\Device\XY\StgMoveXY.cs" />
+    <Compile Include="Macros\Device\Z\StgGetPosZ.cs" />
+    <Compile Include="Macros\Device\Z\StgMoveMainZ.cs" />
+    <Compile Include="Macros\Device\Z\StgMoveZ.cs" />
+    <Compile Include="Macros\ImageDocument\Activate\ActivateDocument.cs" />
+    <Compile Include="Macros\ImageDocument\Close\CloseCurrentDocument.cs" />
+    <Compile Include="Macros\ImageDocument\Open\OpenDocument.cs" />
+    <Compile Include="Macros\ImageDocument\Save\ImageSaveAs.cs" />
+    <Compile Include="Macros\Macro\RunMacro.cs" />
+    <Compile Include="Macros\ND\Experiment\ND_DefineExperiment.cs" />
+    <Compile Include="Macros\ND\Experiment\ND_ExportToTIFF.cs" />
+    <Compile Include="Macros\ND\Experiment\ND_InsertEvent.cs" />
+    <Compile Include="Macros\ND\Experiment\ND_RunExperiment.cs" />
+    <Compile Include="Macros\ND\MultiChannel\ND_IsInExperimentCapture.cs" />
+    <Compile Include="Macros\ND\MultiPoint\ND_AppendMultipointPoint.cs" />
+    <Compile Include="Macros\ND\MultiPoint\ND_MP_GetCount.cs" />
+    <Compile Include="Macros\ND\MultiPoint\ND_ResetMultipointExp.cs" />
+    <Compile Include="Macros\ND\NDEnableSaveToTIFF.cs" />
+    <Compile Include="Macros\ND\Stimulation\ND_StimulationResetPhases .cs" />
+    <Compile Include="Macros\ND\Stimulation\ND_RunSequentialStimulationExp.cs" />
+    <Compile Include="Macros\ND\Stimulation\ND_StimulationAppendPhase.cs" />
+    <Compile Include="Macros\ND\TimeLapse\ND_AppendTimePhase.cs" />
+    <Compile Include="Macros\ND\TimeLapse\ND_AppendTimePhaseEx.cs" />
+    <Compile Include="Macros\ND\TimeLapse\ND_GetTimeLapsePhaseCount.cs" />
+    <Compile Include="Macros\ND\TimeLapse\ND_GetTimePhase.cs" />
+    <Compile Include="Macros\ND\TimeLapse\ND_GetTimePhaseSchedule.cs" />
+    <Compile Include="Macros\ND\TimeLapse\ND_ResetTimeExp.cs" />
+    <Compile Include="Macros\ND\TimeLapse\ND_RunTimeExp.cs" />
+    <Compile Include="Macros\ND\ZSeries\ND_GetZSeriesExp.cs" />
+    <Compile Include="Macros\ND\ZSeries\ND_ResetZSeriesExp.cs" />
+    <Compile Include="Macros\ND\ZSeries\ND_SetZSeriesExp.cs" />
+    <Compile Include="Macros\ROI\ChangeROIType.cs" />
+    <Compile Include="Macros\ROI\ClearMeasROI.cs" />
+    <Compile Include="Macros\ROI\CreateRectangleROI.cs" />
+    <Compile Include="Macros\ROI\GetROICount.cs" />
+    <Compile Include="Macros\ROI\GetROIIdFromIndex.cs" />
+    <Compile Include="Macros\ROI\GetROIInfo.cs" />
+    <Compile Include="CommandManager.cs" />
+    <Compile Include="NisInterface\IVariable.cs" />
+    <Compile Include="PublicDefine.cs" />
+    <Compile Include="StoredData.cs" />
+    <Compile Include="NisInterface\IMacro.cs" />
+    <Compile Include="NisMacroAttribute.cs" />
+    <Compile Include="Macros\NisMacroBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilty.cs" />
+    <Compile Include="Variable\NisVariableBase.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

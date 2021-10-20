@@ -1,0 +1,141 @@
+﻿
+/*------button------*/
+.index_update_button {
+    width: 100px;
+    height: 30px;
+    border-style: none;
+    background-color: #008080;
+    color: #ffffff;
+}
+
+.main_status_update_button {
+    width:130px;
+    height:20px;
+    border-style: none;
+    background-color: #b6ff00;
+    color: #000000;
+}
+
+
+.image_download_button {
+    width: 50px;
+    height: 20px;
+    border-style: none;
+    background-color: #000000;
+    color: #ffffff;
+}
+/*------------------*/
+
+/*------table height------*/
+
+.retrieved_image_tr img {
+    width: 100px;
+    height: 100px;
+}
+
+/*親ページdiv*/
+.main_content_body_div {
+    margin-top: 0px;
+    margin-left: 150px;
+    height: 600px;
+}
+
+.content_body_div {
+    margin-top: 10px;
+    margin-left: 50px;
+    height: 400px;
+}
+/*親ページdiv*/
+
+
+#system_status_table {
+    margin-bottom: 50px;
+}
+
+.navbar-fixed-top {
+    border-bottom-style: solid;
+}
+
+
+#imagelist_table_div {
+    height: 300px;
+}
+
+#image_list_table {
+    height: 300px;
+}
+
+
+#api_log_table {
+    height: 300px;
+}
+
+#in_image_div {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+
+#index_update_div {
+    margin-top: 50px;
+}
+
+.status_li_title {
+    margin-left:70px;
+}
+
+.connection_status_ul {
+    margin-left:50px;
+}
+
+.status_li_iscapture_title{
+    list-style:none;
+}
+
+
+.connection_status_li {
+    list-style:none;
+}
+
+
+.connection_status_child_li{
+    list-style:none;
+    margin-left:70px;
+}
+
+.no_image_data {
+    text-align:center;
+    margin-top:200px;
+}
+
+.status_ul {
+    list-style: none;
+    margin-left: 100px;
+}
+
+.status_li{
+    text-align:right;
+}
+
+.table th{
+    width:200px;
+}
+
+.maintable_tr {
+    margin-left: 1000px;
+}
+
+
+.retrieved_top_div {
+    margin-top: 100px;
+}
+
+.connection_lading_ul {
+    margin-left:100px;
+}
+
+.connection_lading_ul li {
+    list-style: none;
+    margin-left: 40px;
+    display: inline-block;
+}

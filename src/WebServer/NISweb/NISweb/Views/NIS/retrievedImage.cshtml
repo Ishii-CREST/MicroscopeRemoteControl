@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm(
+        "RetrievedImage",
+        "NIS",
+        FormMethod.Post
+        ))
+{
+    <input class="index_update_button" type="submit" name="ReLoad" value="ReLoad" />
+    <div id="ret_ajax">
+        @Html.Action("RetrievedImageContent", "NIS")
+    </div>
+}

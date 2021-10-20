@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm(
+        "APILog",
+        "NIS",
+        FormMethod.Post
+        ))
+{
+    <input class="index_update_button" type="submit" name="ReLoad" value="ReLoad" />
+    <div>
+        @Html.Action("APILogContent", "NIS")
+    </div>
+}
